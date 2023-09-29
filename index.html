@@ -1,1894 +1,1061 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-<title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
- 
-<link rel="shortcut icon" href="{Favicon}">
-<link rel="alternate" type="application/rss+xml" href="{RSS}">
-{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!---
-    
-    ZINNIA THEME BY SEYCHE.TUMBLR.COM
-    
-    CREDITS:
-    -material icons by Google: https://fonts.google.com/icons?selected=Material+Icons
-    -pxu photosets by pixel union / with modifications by bychloethemes: https://bychloethemes.tumblr.com/post/155956945114/modified-pxu-photoset-script-modified-by
-    -tippy.js tooltips by atomiks: https://atomiks.github.io/tippyjs/
-    -notecount shortening by shythemes: https://shythemes.tumblr.com/post/156021137818/hello-i-was-wondering-if-you-knew-how-to-shorten
-    -responsive videos by nouvae: https://www.tumblr.com/blog/view/nouvae/176815415055
-    -npf photosets by codematurgy: https://codematurgy.tumblr.com/post/179837255439/npfphotosets-plugin
-    (full list of credits @ seyche.tumblr.com/credits
-    
---->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Mulish:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Overpass:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Spectral:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-<!----- PHOTOSETS ----->
-
-<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
-
-<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
-
-<!----- VARIABLES ----->
-
-<meta name="image:Sidebar" content=""/>
-
-<meta name="color:Background" content="#f2f2f2"/>
-<meta name="color:Posts" content="#fff"/>
-<meta name="color:Text" content="#555555"/>
-<meta name="color:Link" content="#848484"/>
-<meta name="color:Link Hover" content="#212121"/>
-<meta name="color:Accent" content="#83bfe4"/>
-<meta name="color:Borders" content="#e0e0e0"/>
-<meta name="color:Drop Shadow" content="#e5e5e5"/>
-<meta name="color:Title" content="#121212"/>
-<meta name="color:Nav Background" content="#212121"/>
-<meta name="color:Nav Links" content="#d5d5d5"/>
-<meta name="color:Nav Title" content="#fff"/>
-
-<meta name="select:Body Font" content="Overpass" title="Overpass"/>
-<meta name="select:Body Font" content="Karla" title="Karla"/>
-<meta name="select:Body Font" content="Mulish" title="Mulish"/>
-<meta name="select:Body Font" content="Open Sans" title="Open Sans"/>
-<meta name="select:Body Font" content="Roboto" title="Roboto"/>
-<meta name="select:Body Font" content="ABeeZee" title="ABeeZee"/>
-<meta name="select:Body Font" content="Barlow" title="Barlow"/>
-<meta name="select:Body Font" content="Work Sans" title="Work Sans"/>
-<meta name="select:Body Font" content="Lora" title="Lora"/>
-<meta name="select:Body Font" content="Spectral" title="Spectral"/>
-
-<meta name="select:Title Font" content="Montserrat" title="Montserrat"/>
-<meta name="select:Title Font" content="Playfair Display" title="Playfair Display"/>
-<meta name="select:Title Font" content="Libre Baskerville" title="Libre Baskerville"/>
-<meta name="select:Title Font" content="Lora" title="Lora"/>
-<meta name="select:Title Font" content="Roboto" title="Roboto"/>
-
-<meta name="select:Sidebar Position" content="left-sidebar" title="Left"/>
-<meta name="select:Sidebar Position" content="right-sidebar" title="Right"/>
-
-<meta name="select:Font Size" content="15px" title="15px"/>
-<meta name="select:Font Size" content="12px" title="12px"/>
-<meta name="select:Font Size" content="13px" title="13px"/>
-<meta name="select:Font Size" content="14px" title="14px"/>
-<meta name="select:Font Size" content="16px" title="16px"/>
-<meta name="select:Font Size" content="17px" title="17px"/>
-<meta name="select:Font Size" content="18px" title="18px"/>
-
-<meta name="select:Post Width" content="540px" title="540px"/>
-<meta name="select:Post Width" content="400px" title="400px"/>
-<meta name="select:Post Width" content="450px" title="450px"/>
-<meta name="select:Post Width" content="500px" title="500px"/>
-<meta name="select:Post Width" content="600px" title="600px"/>
-<meta name="select:Post Width" content="650px" title="650px"/>
-
-<meta name="select:Photoset Gutter" content="4" title="4px"/>
-<meta name="select:Photoset Gutter" content="3" title="3px"/>
-<meta name="select:Photoset Gutter" content="2" title="2px"/>
-<meta name="select:Photoset Gutter" content="1" title="1px"/>
-
-<meta name="if:Show Icon" content="0"/>
-<meta name="if:Updates Tab" content="0"/>
-<meta name="if:Solid Posts" content="0"/>
-<meta name="if:Rounded Corners" content="1"/>
-<meta name="if:Tags On Click" content="0"/>
-<meta name="if:Show Reblog Info" content="0"/>
-<meta name="if:Hide Caption" content="0"/>
-
-<meta name="text:Post Margin" content="150"/>
-
-<meta name="text:Home Link" content="home"/>
-<meta name="text:Ask Link" content="ask"/>
-<meta name="text:Archive Link" content="archive"/>
-<meta name="text:Link 1 URL" content="" />
-<meta name="text:Link 1" content="" />
-<meta name="text:Link 2 URL" content="" />
-<meta name="text:Link 2" content="" />
-<meta name="text:Link 3 URL" content="" />
-<meta name="text:Link 3" content="" />
-<meta name="text:Link 4 URL" content="" />
-<meta name="text:Link 4" content="" />
-
-<meta name="text:Update Text" content=""/>
-<meta name="text:Watching" content=""/>
-<meta name="text:Reading" content=""/>
-<meta name="text:Listening To" content=""/>
-<meta name="text:Playing" content=""/>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!----- LOAD IN ----->
- 
-<script>
-$(document).ready(function(){
-    $(function() {
-        $('body').removeClass('load-in');
-    });
-});
-</script>
-
-<style type="text/css">
-
-body {
-    font-family: '{select:body font}', sans-serif;
-    font-size: {select:font size};
-    color: {color:text};
-    background-color: {color:background};
-    text-align: left;
-    line-height: 160%;
-    word-wrap: break-word;
-    letter-spacing: 0.04em;
-    overflow-x: hidden;
-    opacity: 1.0;
-    -webkit-transition: 2s opacity;
-    -moz-transition: 2s opacity;
-    -ms-transition: 2s opacity;
-    -o-transition: 2s opacity;
-    transition: 2s opacity;
-}
-
-body.load-in {
-    opacity: 0;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
-}
-
-a {
-    color: {color:link}; 
-    text-decoration: none;
-    cursor: pointer;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-a:hover {
-    color: {color:accent};
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-p a, .posts li a {
-    border-bottom: 2px solid rgba({RGBcolor:accent}, 0.75);
-    display: inline-block;
-    position: relative;
-    padding: 2px 2px 0 2px;
-    z-index: 1;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-
-p a::before, .posts li a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2px 2px 0 2px;
-    background-color: rgba({RGBcolor:accent}, 0.3);
-    z-index: -1;
-    transform: scaleX(0) scaleY(1);
-    transform-origin: left center;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-
-p a:hover::before, .posts li a:hover::before {transform: scaleX(1) scaleY(1);}
-p a:hover, .posts li a:hover {color: {color:title}; border-bottom: 2px solid rgba({RGBcolor:accent}, 1.0);}
-
-blockquote {
-    padding: 0 0 0 1.25em;
-    border-left: 1px solid {color:borders};
-    margin: 1.25em 0 1.25em 1.25em;
-}
-
-h1, h2, h3, h4, h5 {
-    color: {color:title};
-    letter-spacing: 0.1em;
-    line-height: 140%;
-    font-family: '{select:title font}', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a {color: {color:title};}
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {color: {color:accent}}
-h1 {font-size: 1.5em;}
-h2 {font-size: 1.3em;}
-h3 {font-size: 1.25em;}
-h4 {font-size: 1.1em;}
-h5 {font-size: 1em;}
-
-small {font-size: 0.9em;}
-big {font-size: 1.1em;}
-b, bold, strong {color: {color:title};}
-b a, bold a, strong a {color: {color:link};}
-b a:hover, bold a:hover, strong a:hover {color: {color:accent};}
-
-.tippy-tooltip.custom-theme {
-    background-color: {color:posts};
-    color: {color:title};
-    {block:ifRoundedCorners}border-radius: 6px;{/block:ifRoundedCorners}
-    {block:ifNotRoundedCorners}border-radius: 0;{/block:ifNotRoundedCorners}
-    {block:ifSolidPosts}box-shadow: 1px 1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75), -1px -1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75);{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}border: 1px solid {color:borders};{/block:ifNotSolidPosts}
-    text-align: center;
-    font-family: inherit;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-style: normal;
-    padding: 0.25em;
-    margin: 20px auto auto 10px;
-    font-size: 0.8em;
-}
-
-::-webkit-scrollbar {
-    width: 8px; 
-    height: 20px;
-    background-color: {color:background};
-}
- 
-::-webkit-scrollbar-track {background-color: {color:background}; border-radius: 20px;}
- 
-::-webkit-scrollbar-thumb {
-    background-color: {color:title};
-    min-height: 35px;
-    min-width: 35px;
-    border-radius: 10px;
-}
-
-.tmblr-iframe-compact .tmblr-iframe--unified-controls {
-    z-index: 999999999!important;
-    opacity: 0;
-    transform: scale(0.9);
-    transform-origin: 100% 0;
-    margin-top: 0.25em;
-    padding-right: 2.75em;
-    -webkit-transform: scale(0.9);
-    -webkit-transform-origin: 100% 0;
-    -o-transform: scale(0.9);
-    -o-transform-origin: 100% 0;
-    -moz-transform: scale(0.9);
-    -moz-transform-origin: 100% 0;
-    -ms-transform: scale(0.9);
-    -ms-transform-origin: 100% 0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
- 
-.tmblr-iframe-compact .tmblr-iframe--unified-controls:hover {
-    opacity: 1.0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
- 
-.iframe-controls--phone-mobile {display: none!important;}
-.tmblr-iframe-pushdown {padding-top: 0!important;} 
-.tmblr-iframe--app-cta-button {display: none!important;}
-
-/*----- COMMON -----*/
-
-.title {
-    font-family: '{select:title font}', serif;
-    font-size: 1.75em;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    line-height: 150%;
-    color: {color:title};
-    font-weight: bold;
-}
-
-.title a {color: {color:title};}
-.title a:hover {color: {color:accent};}
-
-.icon {
-    display: inline-block;
-    vertical-align: middle;
-    {block:ifRoundedCorners}border-radius: 6px;{/block:ifRoundedCorners}
-}
-
-.upper {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9em;
-}
-
-.subtitle {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9em;
-    font-family: '{select:title font}', serif;
-    font-weight: bold;
-}
-
-.navbg {
-    box-sizing: border-box;
-    padding: 2em;
-    background-color: {color:nav background};
-    color: {color:nav links};
-    {block:ifNotSolidPosts}
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-    {/block:ifNotSolidPosts}
-}
-
-.navbg a {color: {color:nav links};}
-.navbg a:hover {color: {color:accent};}
-
-.navbg .title, .navbg .subtitle, .navbg.subtitle {color: {color:nav title};}
-
-{block:ifSolidPosts}
-.infobg {
-    box-sizing: border-box;
-    padding: 2em;
-    background-color: {color:nav background};
-    color: {color:nav links};
-}
-
-.infobg a {color: {color:nav links};}
-.infobg a:hover {color: {color:accent};}
-{/block:ifSolidPosts}
-
-.padding {padding: 2em;}
-
-.align-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-a svg {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-a:hover svg {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-/*----- SIDEBAR -----*/
-
-aside {
-    position: fixed;
-    top: 125px;
-    width: 225px;
-}
-
-.right-sidebar aside {margin-left: calc({select:post width} + 125px);}
-
-.sidebar {
-    width: 100%;
-    overflow: hidden;
-    {block:ifSolidPosts}
-    background-color: {color:posts};
-    box-shadow: 1px 1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75), -1px -1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75);
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-    {/block:ifSolidPosts}
-}
-
-aside .icon {
-    width: 75px;
-    height: 75px;
-    background-color: {color:posts};
-    padding: 10px;
-    {block:ifSolidPosts}box-shadow: 1px 1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75), -1px -1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75);{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}border: 1px solid {color:borders};{/block:ifNotSolidPosts}
-    border-radius: 50%;
-    margin: auto auto 1em auto;
-    {block:ifSidebarImage}display: none;{/block:ifSidebarImage}
-}
-
-{block:ifNotSolidPosts}
-{block:ifSidebarImage}
-#side-img {
-    margin-bottom: 2em;
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-}
-{/block:ifSidebarImage}
-{/block:ifNotSolidPosts}
-
-#description {border-bottom: 1px solid {color:borders};}
-
-{block:ifSolidPosts}
-#description, nav {padding: 1.5em; box-sizing: border-box;}
-{/block:ifSolidPosts}
-
-{block:ifNotSolidPosts}
-#description {padding-bottom: 1.5em; margin-top: 1em;}
-nav {margin-top: 1.5em;}
-{/block:ifNotSolidPosts}
-
-nav {
-    text-align: left;
-    width: 100%;
-    counter-reset: links-counter;
-}
-
-nav li {list-style-type: none;}
-nav a {display: inline-block; color: {color:nav links};}
-
-nav a::before {
-    counter-increment: links-counter;
-    content: '0'counter(links-counter);
-    font-family: '{select:title font}', serif;
-    font-weight: bold;
-    {block:ifSolidPosts}color: {color:nav title};{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}color: {color:title};{/block:ifNotSolidPosts}
-    margin-right: 0.75em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-nav a:hover {
-    {block:ifSolidPosts}color: {color:nav title} !important;{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}color: {color:title};{/block:ifNotSolidPosts}
-}
-
-nav a:hover::before {
-    color: {color:accent};
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-nav li::before {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: {color:accent};
-    display: inline-block;
-    border-radius: 3px;
-    margin: auto 0.5em 0.2em auto;
-    vertical-align: middle;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-nav li:hover::before {
-    width: 1em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-/*----- HEADER -----*/
-
-header {
-    position: fixed;
-    background-color: {color:posts};
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 1em;
-    box-sizing: border-box;
-    text-align: center;
-    {block:ifSolidPosts}box-shadow: 1px 1px 3px rgba({RGBcolor:drop shadow}), -1px -1px 3px rgba({RGBcolor:drop shadow});{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}border-bottom: 1px solid {color:borders};{/block:ifNotSolidPosts}
-    z-index: 10;
-}
-
-header .title {font-size: 1.25em;}
-
-header svg, header a svg {
-    width: 1.5em; 
-    height: 1.5em;
-    display: inline-block;
-    vertical-align: middle;
-    fill: {color:link};
-}
-
-header a:hover svg {fill: {color:accent};}
-.updates-button-wrap {width: 1.5em; height: 1.5em;}
-.updates-clicked svg {fill: {color:accent};}
-.close-icon {display: none;}
-.updates-clicked .bell-icon {display: none;}
-.updates-clicked .close-icon {display: block;}
-
-/*----- UPDATES TAB -----*/
-
-#updates-tab {
-    width: 200px;
-    position: fixed;
-    z-index: 10;
-    top: 4.75em;
-    left: 15px;
-    display: none;
-}
-
-#updates-tab .navbg {
-    padding: 0.75em 1em; 
-    border-bottom: 1px solid {color:borders};
-    {block:ifNotSolidPosts}
-    {block:ifRoundedCorners}border-radius: 0;{/block:ifRoundedCorners}
-    {/block:ifNotSolidPosts}
-}
-
-.updates-container {
-    background-color: {color:posts};
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-    overflow: hidden;
-    {block:ifSolidPosts}box-shadow: 1px 1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75), -1px -1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75);{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}border: 1px solid {color:borders};{/block:ifNotSolidPosts}
-    margin-bottom: 10px;
-}
-
-.updates-text {padding: 1em;}
-#currently li {list-style-type: none;}
-#currently .upper {color: {color:title}; margin-right: 0.25em;}
-
-/*----- POSTS -----*/
-
-main {
-    width: calc(225px + 125px + {select:post width});
-    margin: auto;
-    position: relative;
-}
-
-#posts-container {
-    width: {select:post width};
-    position: relative;
-}
-
-.left-sidebar #posts-container {margin: 125px 0 125px 350px;}
-.right-sidebar #posts-container {margin: 125px 0;}
-
-article {
-    width: 100%;
-    margin: {text:post margin}px auto;
-    position: relative;
-}
-
-article:first-of-type {margin-top: 0;}
-
-.posts {
-    box-sizing: border-box;
-    {block:ifSolidPosts}
-    box-shadow: 1px 1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75), -1px -1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75);
-    background-color: {color:posts};
-    {block:ifRoundedCorners}
-    border-radius: 8px;
-    overflow: hidden;
-    {/block:ifRoundedCorners}
-    {/block:ifSolidPosts}
-}
-
-.tumblr_video_container {max-height: 540px!important; overflow: hidden!important;}
-.posts li, .posts blockquote, .posts img, figure, video, .video {max-width: 100%;}
-
-/*----- CAPTION -----*/
-
-.caption {
-    {block:ifSolidPosts}padding: 2em;{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}padding: 2em 0;{/block:ifNotSolidPosts}
-    border-bottom: 1px solid {color:borders};
-    list-style-type: none;
-}
-
-{block:ifNotSolidPosts}
-.text-cap:first-of-type {padding-top: 0;}
-{/block:ifNotSolidPosts}
-
-.caption p {margin: 1em 0;}
-.caption p:last-of-type {margin-bottom: 0;}
-.ogcap p:first-of-type {margin-top: 0;}
-.caption iframe, .caption img {max-width: 100%;}
-{block:ifSolidPosts}.captop:first-of-type {border-top: 1px solid {color:borders};}{/block:ifSolidPosts}
-
-{block:ifHideCaption}{block:IndexPage}
-.hide-cap {display: none;}
-{/block:IndexPage}{/block:ifHideCaption}
-
-.user-wrap {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.user-wrap .icon {
-    width: 2em; 
-    height: 2em; 
-    margin-right: 0.25em;
-}
-
-.username {
-    display: inline-block; 
-    vertical-align: middle;
-    line-height: 1em;
-}
-
-.posts .username a {
-    color: {color:nav title};
-    background-color: {color:nav background};
-    padding: 0.6em 0.75em;
-    {block:ifRoundedCorners}border-radius: 6px;{/block:ifRoundedCorners}
-    box-sizing: border-box;
-    margin-left: 0.25em;
-}
-
-.posts .username a, .posts .username a:hover {border-bottom: none; transform: none;}
-.posts .username a::before {display: none;}
-.posts .username a:hover {background-color: {color:accent}; color: #fff;}
-
-.deactive::after {
-    content: '(deactivated)';
-    margin-left: 1em;
-    color: {color:text};
-    opacity: 0.9;
-}
-
-/*----- TEXT -----*/
-
-h1.post-title {
-    {block:ifSolidPosts}
-    padding: 1.25em 1.25em 0 1.25em;
-    margin: 0; 
-    {/block:ifSolidPosts}
-    {block:ifNotSolidPosts}
-    margin-top: 0;
-    {/block:ifNotSolidPosts}
-}
-
-article .posts a.read_more, a.more_notes_link {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-family: '{select:title font}', serif;
-    color: #fff;
-    background-color: {color:accent};
-    padding: 0.5em 0.75em;
-    {block:ifRoundedCorners}border-radius: 6px;{/block:ifRoundedCorners}
-    border-bottom: none;
-    font-weight: bold;
-}
- 
-article .posts a.read_more:hover, a.more_notes_link:hover {background-color: {color:title}}
-a.read_more::before, a.more_notes_link::before {display: none;}
-
-pre {
-    line-height: inherit;
-    font-size: inherit;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-    background-color: {color:nav background};
-    color: {color:nav links};
-    padding: 1.5em;
-    {block:ifRoundedCorners}border-radius: 6px;{/block:ifRoundedCorners}
-}
- 
-@font-face {
-    font-family: Calluna;
-    src: url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.eot?3=&v=f685dc881c60c298ea22a73fe505b88a");
-    src: url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.eot?3%3F=&v=f685dc881c60c298ea22a73fe505b88a#iefix") format("embedded-opentype"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.woff?3=&v=760a50f4d098e59aebaf0f0e58ae2cc8") format("woff"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.ttf?3=&v=5ace789439bff3b27f8d4112725531da") format("truetype"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.svg?3=&v=5b95c481dd7411c6e112143d6646bd9b#_.regular") format("svg");
-    font-weight: 700;
-    font-style: italic
-}
- 
-@font-face {
-    font-family: Fairwater;
-    src: url("https://assets.tumblr.com/fonts/fairwater/fairwater_script_regular-webfont.woff2?v=b7ab7a58cded3365889a447bfd9e9c45") format("woff2"),url("https://assets.tumblr.com/fonts/fairwater/fairwater_script_regular-webfont.woff?v=96e975b7468359e6f67086305577e43e") format("woff");
-    font-weight: 400;
-    font-style: normal
-}
- 
-p.npf_quirky {font-family: Fairwater; font-size: 20px;}
- 
-.npf_color_joey {color: #e57373;}
-.npf_color_monica {color: #ff8a65;}
-.npf_color_phoebe {color: #ffee58;}
-.npf_color_ross {color: #81c784;}
-.npf_color_rachel {color: #4fc3f7;}
-.npf_color_chandler {color: #9575cd;}
-.npf_color_niles {color: #f06292;}
-
-#k {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 15px;
-    background-color: {color:background};
-    color: {color:link};
-    padding: 5px 10px;
-    border-radius: 3px;
-}
- 
-#k:hover {background-color: {color:accent}; color: #fff;}
- 
-#m {
-    text-align: center;
-    display: none;
-    margin-bottom: 50px;
-}
-
-/*----- LINK -----*/
-
-a.link-wrap {
-    display: block;
-    color: {color:nav links};
-    background-color: {color:nav background};
-    {block:ifNotSolidPosts}
-    {block:ifRoundedCorners}
-    border-radius: 8px;
-    overflow: hidden;
-    {/block:ifRoundedCorners}
-    {/block:ifNotSolidPosts}
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-a.link-wrap:hover .link-host, .npf-link-block:hover {
-    background-color: rgba({RGBcolor:accent}, 0.35);
-    color: #fff;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-a.link-wrap:hover .link-host {padding-left: 3em; background-color: {color:accent};}
-a.link-wrap:hover .link-host svg {fill: #fff;}
-
-.link {
-    -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-a.link-wrap .title {
-    color: #fff; 
-    text-align: center;
-    padding: 1.25em;
-}
-
-.link-host {
-    background-color: rgba({RGBcolor:nav background}, 0.75);
-    color: {color:nav links};
-    padding: 2em;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.link-host svg {
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.5em;
-    height: 1.5em;
-    fill: {color:nav links};
-    margin-right: 0.5em;
-}
-
-.npf-link-block {
-    margin-top: 1.25em;
-    {block:ifRoundedCorners}border-radius: 6px;{/block:ifRoundedCorners}
-    {block:ifNotRoundedCorners}border-radius: 0;{/block:ifNotRoundedCorners}
-    border: 1px solid {color:borders};
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
- 
-.npf-link-block .poster .title {background-color: initial; padding: 1.5em;}
-.npf-link-block.no-poster .title {padding: 1.5em 1.5em 0 1.5em;}
-.npf-link-block .title {font-size: 1.25em; border-bottom: none;}
-.npf-link-block .bottom {padding: 1.5em !important; color: {color:text};}
- 
-.npf-link-block .bottom .site-name {
-    font-size: 0.9em;
-    color: {color:text};
-    font-weight: normal;
-    letter-spacing: 0.1em;
-}
-
-/*----- PHOTO -----*/
- 
-img {
-    margin: 0;
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
- 
-.photo img {
-    width: 100%;
-    {block:ifNotSolidPosts}
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-    {/block:ifNotSolidPosts}
-}
-
-.vignette, #vignette {opacity: 0;}
-.tmblr-lightbox, #tumblr_lightbox {background-color: rgba(60, 60, 60, 0.75) !important;}
- 
-.lightbox-image, #tumblr_lightbox img {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    max-width: none;
-}
- 
-/*----- PHOTOSET -----*/
-
-.post-content div.npf_row, .post div.npf_row, body div.npf_row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-{block:ifNotSolidPosts}
-.photo-slideshow, .npf_photoset {
-    {block:ifRoundedCorners}
-    border-radius: 8px;
-    overflow: hidden;
-    {/block:ifRoundedCorners}
-}
-{/block:ifNotSolidPosts}
-
-{block:ifSolidPosts}
-.npf_photoset {margin: 1.5em -2em;}
-{/block:ifSolidPosts}
-
-{block:ifNotSolidPosts}
-.npf_photoset {margin: 1.5em 0;}
-{/block:ifNotSolidPosts}
-
-.captext figure {margin: 1em 0;}
-.captext figure .tmblr-full {margin-top: {select:photoset gutter}px;}
-.tmblr-full:hover {cursor: pointer;}
-.npf_image, .tmblr-full {border: none; outline: none;}
-
-figure.tmblr-full a, figure.tmblr-full a:hover {border-bottom: none;}
-figure.tmblr-full a::before, figure.tmblr-full a:hover::before {display: none;}
-
-/*----- QUOTE -----*/
-
-.quote, p.npf_quote {
-    font-family: '{select:title font}', serif;
-    font-size: 1.5em;
-    line-height: 160%;
-    font-weight: bold;
-}
-
-.quote.navbg {padding: 1.5em;}
-.quote {color: {color:nav title};}
-
-.quote p:first-of-type {margin-top: 0;}
-.quote p:last-of-type {margin-bottom: 0;}
-p.npf_quote {font-family: inherit; margin-bottom: 1em;}
-
-.source {
-    {block:ifSolidPosts}padding: 2em;{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}margin-top: 2em;{/block:ifNotSolidPosts}
-    text-align: right;
-}
-
-/*----- CHAT -----*/
-
-.chat {padding: 0; margin: 0;}
-.chat li {list-style-type: none;}
-
-.line {
-    {block:ifSolidPosts}padding: 2em;{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}padding: 2em 0;{/block:ifNotSolidPosts}
-    border-bottom: 1px solid {color:borders};
-}
-
-p.npf_chat {font-family: inherit; margin-top: 0.5em;}
-p.npf_chat:first-of-type {margin-top: 1.25em;}
-
-p.npf_chat b {
-    font-family: '{select:title font}', serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9em;
-}
-
-.chatter {color: {color:title}; letter-spacing: 0.1em; font-weight: bold;}
-
-/*----- ASK -----*/
-
-.asker-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.asker-wrap .icon {
-    width: 3em;
-    height: 3em;
-    margin-right: 1.5em;
-}
-
-.question {margin-top: 1em;}
-.question p:first-of-type {margin-top: 0;}
-.question p:last-of-type {margin-bottom: 0;}
-
-.asker-wrap a {color: {color:nav links};}
-.asker-wrap a:hover {color: {color:accent};}
-.question a {color: {color:accent};}
-.question a:hover {color: {color:nav links};}
-
-/*----- AUDIO -----*/
-
-{block:ifNotSolidPosts}
-{block:ifRoundedCorners}
-.audiopost {border-radius: 8px; overflow: hidden;}
-{/block:ifRoundedCorners}
-{/block:ifNotSolidPosts}
-
-.audio-wrap {
-    -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-.audio-content {padding: 2em;}
- 
-.albumart {
-    z-index: 5;
-    width: 100px;
-    height: 100px;
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-    margin: auto;
-}
- 
-.audioinfo {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.85);
-    margin-top: 1em;
-}
-
-.audioinfo .subtitle {color: #fff;}
- 
-.audio-button-wrap {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 1.5em 2em;
-    background-color: rgba({RGBcolor:nav background}, 0.75);
-}
- 
-.button {
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    margin: 8px 7px 6px 7px;
-}
- 
-.audiobox {
-    background-color: #f2f2f2;
-    z-index: 2;
-    position: relative;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 10px;
-}
- 
-.audio-button-wrap svg {
-    fill: {color:nav links};
-    width: 1.75em;
-    height: 1.75em;
-}
-
-.audio-button-wrap svg:first-of-type, .audio-button-wrap svg:last-of-type {width: 1.5em; height: 1.5em;}
-
-/*----- INFO -----*/
-
-{block:ifNotSolidPosts}
-.info {margin-top: 2em;}
-{/block:ifNotSolidPosts}
-
-.info-left a {margin-right: 1em; display: inline-block;}
-.info li {list-style-type: none;}
-
-.type a {
-    background-color: {color:accent};
-    color: #fff;
-    padding: 0.5em 1em;
-    {block:ifRoundedCorners}border-radius: 6px;{/block:ifRoundedCorners}
-}
-
-.type a:hover {background-color: {color:title}; color: #fff;}
-
-{block:ifShowReblogInfo}
-.viasrc {
-    position: absolute;
-    width: 25px;
-    margin-left: calc({select:post width} + 10px);
-    z-index: 5;
-    {block:IndexPage}
-    opacity: 0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    {/block:IndexPage}
-}
-
-.left-sidebar .viasrc {margin-left: calc({select:post width} + 10px);}
-.right-sidebar .viasrc {margin-left: -35px;}
-
-article:hover .viasrc {
-    opacity: 1.0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.viasrc a {display: block; margin-bottom: 10px; }
-
-.viasrc a img {
-    width: 25px; 
-    height: 25px;
-    {block:ifSolidPosts}box-shadow: 1px 1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75), -1px -1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75);{/block:ifSolidPosts}
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.viasrc a:hover img {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-{/block:ifShowReblogInfo}
-
-.info-controls {
-    flex-shrink: 0; 
-    {block:ifTagsOnClick}min-width: 6.5em;{/block:ifTagsOnClick}
-}
-
-.info-controls a {margin-left: 1em;}
-
-.info-controls a svg {
-    width: 1.5em;
-    height: 1.5em;
-    fill: {color:nav links};
-    display: inline-block; 
-    vertical-align: middle;
-}
-
-.info-controls a:hover svg {fill: {color:accent};}
-
-{block:PermalinkPage}{block:ifSolidPosts}
-.info-left li a:hover {color: {color:nav title};}
-{/block:ifSolidPosts}{/block:PermalinkPage}
- 
-.like-wrap {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    width: 1.5em;
-    height: 1.5em;
-    cursor: pointer;
-}
- 
-.like_button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 2;
-}
- 
-.new-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
- 
-.like_button iframe {width: 100% !important; height: 100% !important;}
-.like_button.liked + .new-button svg {fill: #d32f2f;}
-
-.pin-post {
-    text-align: center; 
-    {block:ifNotSolidPosts}margin-bottom: 2em;{/block:ifNotSolidPosts}
-    {block:ifSolidPosts}
-    padding: 1.5em;
-    border-bottom: 1px solid {color:borders};
-    {/block:ifSolidPosts}
-}
-
-.pin-post svg {
-    width: 1.5em;
-    height: 1.5em;
-    fill: {color:accent};
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 0.5em;
-}
-
-/*----- TAGS -----*/
-
-.tags {margin-top: 1.25em; font-size: 0.8em;}
-
-.tags a {
-    background-color: {color:posts};
-    color: {color:text};
-    padding: 0.5em 1em;
-    display: inline-block;
-    margin: 0 1em 0.75em 0;
-    {block:ifSolidPosts}box-shadow: 1px 1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75), -1px -1px 5px 1px rgba({RGBcolor:drop shadow}, 0.75);{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}border: 1px solid {color:borders};{/block:ifNotSolidPosts}
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-}
-
-.tags a:hover {
-    background-color: {color:accent}; 
-    color: {color:posts};
-    {block:ifNotSolidPosts}
-    border: 1px solid {color:accent};
-    {/block:ifNotSolidPosts}
-}
-
-a.tag-button.tag-clicked svg {fill: {color:accent};}
-
-.td-page {
-    {block:ifSolidPosts}
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners} 
-    {/block:ifSolidPosts}
-    overflow: hidden;
-}
-
-.td-page span {
-    color: {color:accent};
-    font-family: '{select:title font}', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9em;
-}
-
-/*----- POST NOTES -----*/
-
-{block:ifNotSolidPosts}
-.post-notes .navbg {
-    background-color: {color:background};
-    color: {color:text};
-    padding: 0 0 2em 0;
-}
-{/block:ifNotSolidPosts}
-
-#notetitle {
-    {block:ifSolidPosts}color: {color:nav title};{/block:ifSolidPosts} 
-    font-size: 1.25em;
-}
-
-ol.notes {
-    list-style-type: none;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-ol.notes li.note {
-    display: block; 
-    border-top: 1px solid {color:borders};
-    {block:ifSolidPosts}padding: 1.5em;{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}padding: 1.5em 0;{/block:ifNotSolidPosts}
-}
-
-ol.notes a {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9em;
-}
-
-ol.notes a, ol.notes a:hover {border-bottom: none;}
-
-ol.notes li.note img.avatar {
-    {block:ifRoundedCorners}border-radius: 8px;{/block:ifRoundedCorners}
-    margin-right: 1em;
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.5em;
-    height: 1.5em;
-}
-
-ol.notes a.avatar_frame {border-bottom: none;}
-ol.notes a.avatar_frame::before {display: none;} 
-
-/*----- MOBILE CONTROLS -----*/
-
-.mobile-controls {display: none;}
-.mobile-controls a {margin-left: 0.75em;}
-
-/*----- PAGINATION -----*/
-
-.pg {
-    {block:ifSolidPosts}padding: 2em;{/block:ifSolidPosts}
-    {block:ifNotSolidPosts}
-    border-top: 1px solid {color:borders};
-    padding-top: 2em;
-    {/block:ifNotSolidPosts}
-}
-
-/*----- MEDIA QUERIES -----*/
-
-@media only screen and (max-width: 1024px) {
-    main {width: {select:post width};}
-    .left-sidebar #posts-container, .right-sidebar #posts-container {width: 100%; margin: 125px auto;}
-    
-    .left-sidebar aside, .right-sidebar aside {
-        position: static;
-        width: 100%;
-        margin: 125px auto {text:post margin}px auto;
+  <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};;/*! For license information please see nr-loader-rum-1.241.0.min.js.LICENSE.txt */
+(()=>{"use strict";var e,t,n={5763:(e,t,n)=>{n.d(t,{P_:()=>g,Mt:()=>h,C5:()=>s,DL:()=>b,OP:()=>E,lF:()=>k,Yu:()=>w,Dg:()=>p,CX:()=>c,GE:()=>y,sU:()=>j});var r=n(8632),i=n(9567);const a={beacon:r.ce.beacon,errorBeacon:r.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},o={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!o[e])throw new Error("Info for ".concat(e," was never set"));return o[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");o[e]=(0,i.D)(t,a),(0,r.Qy)(e,o[e],"info")}var u=n(7056);const d=()=>{const e={block_selector:"[data-nr-block]",mask_input_options:{password:!0}};return{proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:u.oD,inactiveMs:u.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampling_rate:50,error_sampling_rate:50,mask_text_selector:"*",mask_all_inputs:!0,get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){e.block_selector+=",".concat(t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){e.mask_input_options={...t,password:!0}}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},l={},f="All configuration objects require an agent identifier!";function g(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,i.D)(t,d()),(0,r.Qy)(e,l[e],"config")}function h(e,t){if(!e)throw new Error(f);var n=g(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const v={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},m={};function b(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!m[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return m[e]}function y(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");m[e]=(0,i.D)(t,v),(0,r.Qy)(e,m[e],"loader_config")}const w=(0,r.mF)().o;var A=n(385),x=n(6818);const _={buildEnv:x.Re,customTransaction:void 0,disabled:!1,distMethod:x.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(A._A?.performance?.timeOrigin||A._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+A._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof A._A.XMLHttpRequest?.prototype?.addEventListener,version:x.q4,denyList:void 0},D={};function E(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!D[e])throw new Error("Runtime for ".concat(e," was never set"));return D[e]}function j(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");D[e]=(0,i.D)(t,_),(0,r.Qy)(e,D[e],"runtime")}function k(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,n)=>{n.d(t,{D:()=>i});var r=n(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,r.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,r.Z)("Setting a Configurable requires a model to set its initial properties");const n=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(n).length?e:n;for(let o in a)if(void 0!==e[o])try{"object"==typeof e[o]&&"object"==typeof t[o]?n[o]=i(e[o],t[o]):n[o]=e[o]}catch(e){(0,r.Z)("An error occurred while setting a property of a Configurable",e)}return n}catch(e){(0,r.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,n)=>{n.d(t,{Re:()=>i,gF:()=>a,q4:()=>r});const r="1.241.0",i="PROD",a="CDN"},385:(e,t,n)=>{n.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>a,cv:()=>l,iS:()=>o,il:()=>r,ux:()=>c,v6:()=>i,w1:()=>u});const r="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=r?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===a?.document?.visibilityState),s=(a?.location,/iPad|iPhone|iPod/.test(a.navigator?.userAgent)),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(r&&window.document.documentMode)),d=!!a.navigator?.sendBeacon,l=Math.floor(a?.performance?.timeOrigin||a?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,n)=>{n.d(t,{w:()=>a});var r=n(50);const i={agentIdentifier:"",ee:void 0};class a{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,n)=>{n.d(t,{L:()=>d,R:()=>c});var r=n(8325),i=n(1284),a=n(4322),o=n(3325);const s={};function c(e,t){const n={staged:!1,priority:o.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return o(t);s[e].get(t).staged=!0;const n=[...s[e]];function o(t){const n=e?r.ee.get(e):r.ee,o=a.X.handlers;if(n.backlog&&o){var s=n.backlog[t],c=o[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete o[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}n.every((e=>{let[t,n]=e;return n.staged}))&&(n.sort(((e,t)=>e[1].priority-t[1].priority)),n.forEach((t=>{let[n]=t;s[e].delete(n),o(n)})))}function l(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],a=e[3],o=e[2];i.apply(a,o)}}))}},8325:(e,t,n)=>{n.d(t,{A:()=>c,ee:()=>u});var r=n(8632),i=n(2210),a=n(5763);class o{constructor(e){this.contextId=e}}var s=n(3117);const c="nr@context:".concat(s.a),u=function e(t,n){var r={},s={},d={},f=!1;try{f=16===n.length&&(0,a.OP)(n).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var n=r[e];if(!n)return;for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)},emit:function(e,n,r,i,a){!1!==a&&(a=!0);if(u.aborted&&!i)return;t&&a&&t.emit(e,n,r);for(var o=p(r),c=v(e),d=c.length,l=0;l<d;l++)c[l].apply(o,n);var f=b()[s[e]];f&&f.push([g,e,n,o]);return o},get:m,listeners:v,context:p,buffer:function(e,t){const n=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[r,i]=e;s[i]=t,t in n||(n[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:n,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return g;function p(e){return e&&e instanceof o?e:e?(0,i.X)(e,c,(()=>new o(c))):new o(c)}function h(e,t){r[e]=v(e).concat(t)}function v(e){return r[e]||[]}function m(t){return d[t]=d[t]||e(g,t)}function b(){return g.backlog}}(void 0,"globalEE"),d=(0,r.fP)();function l(){u.aborted=!0,u.backlog={}}d.ee||(d.ee=u)},5546:(e,t,n)=>{n.d(t,{E:()=>r,p:()=>i});var r=n(8325).ee.get("handle");function i(e,t,n,i,a){a?(a.buffer([e],i),a.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4322:(e,t,n)=>{n.d(t,{X:()=>a});var r=n(5546);a.on=o;var i=a.handlers={};function a(e,t,n,a){o(a||r.E,i,e,t,n)}function o(e,t,n,i,a){a||(a="feature"),e||(e=r.E);var o=t[a]=t[a]||{};(o[n]=o[n]||[]).push([e,i])}},3239:(e,t,n)=>{n.d(t,{bP:()=>s,iz:()=>c,m$:()=>o});var r=n(385);let i=!1,a=!1;try{const e={get passive(){return i=!0,!1},get signal(){return a=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function o(e,t){return i||a?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,o(n,r))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,o(n,r))}},3117:(e,t,n)=>{n.d(t,{a:()=>r});const r=(0,n(4402).Rl)()},4402:(e,t,n)=>{n.d(t,{Rl:()=>o,ky:()=>s});var r=n(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(31))),i.split("").map((e=>"x"===e?a(t,++n).toString(16):"y"===e?(3&a()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(31)));const o=[];for(var s=0;s<e;s++)o.push(a(n,++i).toString(16));return o.join("")}},7056:(e,t,n)=>{n.d(t,{Bq:()=>r,Hb:()=>a,oD:()=>i});const r="NRBA",i=144e5,a=18e5},7894:(e,t,n)=>{function r(){return Math.round(performance.now())}n.d(t,{z:()=>r})},50:(e,t,n)=>{function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},2587:(e,t,n)=>{n.d(t,{N:()=>c,T:()=>u});var r=n(8325),i=n(5546),a=n(3325);const o={stn:[a.D.sessionTrace],err:[a.D.jserrors,a.D.metrics],ins:[a.D.pageAction],spa:[a.D.spa],sr:[a.D.sessionReplay,a.D.sessionTrace]},s=new Set;function c(e,t){const n=r.ee.get(t);e&&"object"==typeof e&&(s.has(t)||Object.entries(e).forEach((e=>{let[t,r]=e;o[t]?o[t].forEach((e=>{r?(0,i.p)("feat-"+t,[],void 0,e,n):(0,i.p)("block-"+t,[],void 0,e,n),(0,i.p)("rumresp-"+t,[Boolean(r)],void 0,e,n)})):r&&(0,i.p)("feat-"+t,[],void 0,void 0,n),u[t]=Boolean(r)})),Object.keys(o).forEach((e=>{void 0===u[e]&&(o[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,n))),u[e]=!1)})),s.add(t))}const u={}},2210:(e,t,n)=>{n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,n)=>{n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},4351:(e,t,n)=>{n.d(t,{P:()=>a});var r=n(8325);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function a(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,n)=>{n.d(t,{K:()=>o,b:()=>a});var r=n(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(i())return e();(0,r.bP)("load",e,t)}function o(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},8632:(e,t,n)=>{n.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>a,fP:()=>o,gG:()=>d,mF:()=>s});var r=n(7894),i=n(385);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function o(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=o();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,n){let i=o();const a=i.initializedAgents||{},s=a[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,r.z)(),date:new Date}),i.initializedAgents={...a,[e]:{...s,[n]:t}},i}function u(e,t){o()[e]=t}function d(){return function(){let e=o();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),s(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},7956:(e,t,n)=>{n.d(t,{N:()=>i});var r=n(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),n,i)}},3081:(e,t,n)=>{n.d(t,{gF:()=>a,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>o});const r=n(3325).D.metrics,i="sm",a="cm",o="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,n)=>{n.d(t,{t:()=>r});const r=n(3325).D.pageViewEvent},9251:(e,t,n)=>{n.d(t,{t:()=>r});const r=n(3325).D.pageViewTiming},5938:(e,t,n)=>{n.d(t,{W:()=>a});var r=n(5763),i=n(8325);class a{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,r.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=n,this.blocked=!1}}},7530:(e,t,n)=>{n.d(t,{j:()=>b});var r=n(3325),i=n(5763),a=n(5546),o=n(8325),s=n(7894),c=n(8e3),u=n(3960),d=n(385),l=n(50),f=n(3081),g=n(8632);function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start"].forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let a=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&a.push(e.api[t](...r))})),a.length>1?a:a[0]}(t,...r)}}))}var h=n(2587);const v=e=>{n.p=e};let m=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:w,info:A,loader_config:x,runtime:_={loaderType:b},exposed:D=!0}=t;const E=(0,g.gG)();A||(w=E.init,A=E.info,x=E.loader_config),(0,i.Dg)(e,w||{}),(0,i.GE)(e,x||{}),A.jsAttributes??={},d.v6&&(A.jsAttributes.isWorker=!0),(0,i.CX)(e,A);const j=(0,i.P_)(e),k=[A.beacon,A.errorBeacon];m||(m=!0,j.proxy.assets&&(v(j.proxy.assets+"/"),k.push(j.proxy.assets)),j.proxy.beacon&&k.push(j.proxy.beacon)),_.denyList=[...j.ajax.deny_list||[],...j.ajax.block_internal?k:[]],(0,i.sU)(e,_),p();const T=function(e,t){t||(0,c.R)(e,"api");const g={};var p=o.ee.get(e),h=p.get("tracer"),v="api-",m=v+"ixn-";function b(t,n,r,a){const o=(0,i.C5)(e);return null===n?delete o.jsAttributes[t]:(0,i.CX)(e,{...o,jsAttributes:{...o.jsAttributes,[t]:n}}),A(v,r,!0,a||null===n?"session":void 0)(t,n)}function y(){}["setErrorHandler","finished","addToTrace","inlineHit","addRelease"].forEach((e=>{g[e]=A(v,e,!0,"api")})),g.addPageAction=A(v,"addPageAction",!0,r.D.pageAction),g.setCurrentRouteName=A(v,"routeName",!0,r.D.spa),g.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,A(v,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",n);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string or number type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},g.start=e=>{try{const t=e?"defined":"undefined";(0,a.p)(f.xS,["API/start/".concat(t,"/called")],void 0,r.D.metrics,p);const n=Object.values(r.D);if(void 0===e)e=n;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!n.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(n));e.includes(r.D.pageViewEvent)||e.push(r.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},g.interaction=function(){return(new y).get()};var w=y.prototype={createTracer:function(e,t){var n={},i=this,o="function"==typeof t;return(0,a.p)(m+"tracer",[(0,s.z)(),e,n],i,r.D.spa,p),function(){if(h.emit((o?"":"no-")+"fn-start",[(0,s.z)(),i,o],n),o)try{return t.apply(this,arguments)}catch(e){throw h.emit("fn-err",[arguments,this,e],n),e}finally{h.emit("fn-end",[(0,s.z)()],n)}}}};function A(e,t,n,i){return function(){return(0,a.p)(f.xS,["API/"+t+"/called"],void 0,r.D.metrics,p),i&&(0,a.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,p),n?void 0:this}}function x(){n.e(75).then(n.bind(n,7438)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>(0,l.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{w[e]=A(m,e,void 0,r.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,a.p)(f.xS,["API/noticeError/called"],void 0,r.D.metrics,p),(0,a.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,p)},d.il?(0,u.b)((()=>x()),!0):x(),g}(e,y);return(0,g.Qy)(e,T,"api"),(0,g.Qy)(e,D,"exposed"),(0,g.EZ)("activatedFeatures",h.T),T}},3325:(e,t,n)=>{n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8,[r.sessionReplay]:9}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var a=r[e]={exports:{}};return n[e](a,a.exports,i),a.exports}i.m=n,i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>"nr-rum-1.241.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.241.0.PROD:",i.l=(n,r,a,o)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==a)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==n||l.getAttribute("data-webpack")==t+a){s=l;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+a),s.src=n),e[n]=[r];var f=(t,r)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},g=setTimeout(f.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=f.bind(null,s.onerror),s.onload=f.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var a=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var a=n&&("load"===n.type?"missing":n.type),o=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+a+": "+o+")",s.name="ChunkLoadError",s.type=a,s.request=o,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,a,[o,s,c]=n,u=0;if(o.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<o.length;u++)a=o[u],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},n=self["webpackChunk:NRBA-1.241.0.PROD"]=self["webpackChunk:NRBA-1.241.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{var e=i(50);class t{addPageAction(t,n){(0,e.Z)("Call to agent api addPageAction failed. The session trace feature is not currently initialized.")}setPageViewName(t,n){(0,e.Z)("Call to agent api setPageViewName failed. The page view feature is not currently initialized.")}setCustomAttribute(t,n,r){(0,e.Z)("Call to agent api setCustomAttribute failed. The js errors feature is not currently initialized.")}noticeError(t,n){(0,e.Z)("Call to agent api noticeError failed. The js errors feature is not currently initialized.")}setUserId(t){(0,e.Z)("Call to agent api setUserId failed. The js errors feature is not currently initialized.")}setApplicationVersion(t){(0,e.Z)("Call to agent api setApplicationVersion failed. The agent is not currently initialized.")}setErrorHandler(t){(0,e.Z)("Call to agent api setErrorHandler failed. The js errors feature is not currently initialized.")}finished(t){(0,e.Z)("Call to agent api finished failed. The page action feature is not currently initialized.")}addRelease(t,n){(0,e.Z)("Call to agent api addRelease failed. The agent is not currently initialized.")}start(t){(0,e.Z)("Call to agent api addRelease failed. The agent is not currently initialized.")}}var n=i(3325),r=i(5763);const a=Object.values(n.D);function o(e){const t={};return a.forEach((n=>{t[n]=function(e,t){return!1!==(0,r.Mt)(t,"".concat(e,".enabled"))}(n,e)})),t}var s=i(7530);var c=i(8e3),u=i(5938),d=i(3960),l=i(385);class f extends u.W{constructor(e,t,n){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,r.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,c.R)(e,n)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const n=l.il&&!0===(0,r.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let a;this.onAggregateImported=new Promise((e=>{a=e}));const o=async()=>{let r;try{if(n){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,3228));r=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,r))return(0,c.L)(this.agentIdentifier,this.featureName),void a(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:n}=await e(this.featureName,"aggregate");this.featAggregate=new n(this.agentIdentifier,this.aggregator,t),a(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),a(!1)}};l.il?(0,d.b)((()=>o()),!0):o()}shouldImportAgg(e,t){return e!==n.D.sessionReplay||!!r.Yu.MO&&(!1!==(0,r.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplay))}}var g=i(7633);class p extends f{static featureName=g.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,g.t,n),this.importAggregator()}}var h=i(1117),v=i(1284);class m extends h.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var a=this.getBucket(e,t,n,i);return a.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,v.D)(e,(function(e,n){t[e]=b(n,t[e])})),t}(r,a.metrics),a}merge(e,t,n,r,i){var a=this.getBucket(e,t,r,i);if(a.metrics){var o=a.metrics;o.count+=n.count,(0,v.D)(n,(function(e,t){if("count"!==e){var r=o[e],i=n[e];i&&!i.c?o[e]=b(i.t,r):o[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,o[e])}}))}else a.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=b(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=w(this.aggregatedData[n]),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function w(e){return"object"!=typeof e?[]:(0,v.D)(e,A)}function A(e,t){return t}var x=i(8632),_=i(4402),D=i(4351);var E=i(5546),j=i(7956),k=i(3239),T=i(7894),N=i(9251);class S extends f{static featureName=N.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,N.t,n),l.il&&((0,j.N)((()=>(0,E.p)("docHidden",[(0,T.z)()],void 0,N.t,this.ee)),!0),(0,k.bP)("pagehide",(()=>(0,E.p)("winPagehide",[(0,T.z)()],void 0,N.t,this.ee))),this.importAggregator())}}var P=i(3081);class C extends f{static featureName=P.t9;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,P.t9,n),this.importAggregator()}}new class extends t{constructor(t){let n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,_.ky)(16);super(),l._A?(this.agentIdentifier=n,this.sharedAggregator=new m({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),Object.assign(this,(0,s.j)(this.agentIdentifier,t,t.loaderType||"agent")),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,r.C5)(this.agentIdentifier),init:(0,r.P_)(this.agentIdentifier),loader_config:(0,r.DL)(this.agentIdentifier),runtime:(0,r.OP)(this.agentIdentifier)}}run(){const t="features";try{const r=o(this.agentIdentifier),i=[...this.desiredFeatures];i.sort(((e,t)=>n.p[e.featureName]-n.p[t.featureName])),i.forEach((t=>{if(r[t.featureName]||t.featureName===n.D.pageViewEvent){const i=function(e){switch(e){case n.D.ajax:return[n.D.jserrors];case n.D.sessionTrace:return[n.D.ajax,n.D.pageViewEvent];case n.D.sessionReplay:return[n.D.sessionTrace];case n.D.pageViewTiming:return[n.D.pageViewEvent];default:return[]}}(t.featureName);i.every((e=>r[e]))||(0,e.Z)("".concat(t.featureName," is enabled but one or more dependent features has been disabled (").concat((0,D.P)(i),"). This may cause unintended consequences or missing data...")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,x.Qy)(this.agentIdentifier,this.features,t)}catch(n){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",n);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,x.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}addToTrace(t){(0,e.Z)("Call to agent api addToTrace failed. The page action feature is not currently initialized.")}setCurrentRouteName(t){(0,e.Z)("Call to agent api setCurrentRouteName failed. The spa feature is not currently initialized.")}interaction(){(0,e.Z)("Call to agent api interaction failed. The spa feature is not currently initialized.")}}({features:[p,S,C],loaderType:"lite"})})()})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="keywords"  content="sites web,newsletters,pages de destinations,visuels publicitaires,création,montage,vidéo,chartes graphiques,identité visuelle,logos,carte de visite,flyer,graphiste,designer,sao paulo,brasil" />
+      <meta name="description"  content="Création de sites web, newsletters, pages de destinations, visuels publicitaires, création de logos, montage vidéo, chartes graphiques, identité visuelle, carte de visite, plaquette, flyer, affiches." />
+      <meta name="twitter:card"  content="summary_large_image" />
+      <meta name="twitter:site"  content="@AdobePortfolio" />
+      <meta  property="og:title" content="Matheus Gomes - Designer" />
+      <meta  property="og:description" content="Création de sites web, newsletters, pages de destinations, visuels publicitaires, création de logos, montage vidéo, chartes graphiques, identité visuelle, carte de visite, plaquette, flyer, affiches." />
+      <meta  property="og:image" content="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_car_202x158.jpg?h=efba997c89058729cbf053d5ccba01d7" />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/2a12e5a8-d158-40c7-be8d-7c3d22394687_carw_1x1x32.png?h=a75f327707a22a7323e6700dfb69ae3a" />
+      <link rel="stylesheet" href="/dist/css/main.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/0f64e4f707463e180231257f6f020d811693324816.css?h=cf282e9d32610498f2297a92674c6694" type="text/css" />
+    <link rel="canonical" href="https://matgoms.me/projects" />
+      <title>Matheus Gomes - Designer</title>
+    <script type="text/javascript" src="//use.typekit.net/ik/B3jgmxPVkvcAcejCFaq8yjlRud9SA_IB34o-UyIG6zqfezbgfHYEBsJzwD9oFDIDWhJaFRB8FDIkwcJk5AsywcmywcmywQjDwRmRFQboZc4cFcwu5QItjhj-LKG0dABXZhNlSkolZP37OcuoSeNkieZzde8zOcFzdP37O1gkdDJlic88ikolpWgzS1scdhUTdkoRdhXCdABXZhNlSkolZPUlpWgzS1scdhUTdkoRdhXCSY4zwKuh-AmaOcuoSeNkieZzde8zOcFzdPUaiaS0dABXZhNlSkolZPJIZhuD-KJIicFDdPG4fwtuIMMjgfMfH6qJn3IbMs6IJMJ7fbKlMsMgeMj6MKG4fJCgIMIjgkMfqMepUpEcg6.js?cb=00c4fc5cd7efacc26a8ef9a0440c1778e455b700" async onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
     }
-    
-    aside nav li {display: inline-block; margin-right: 0.75em;}
-} 
-
-@media only screen and (max-width: 700px) {
-    main {
-        {block:ifSolidPosts}width: 100vw;{/block:ifSolidPosts}
-        {block:ifNotSolidPosts}width: 85vw;{/block:ifNotSolidPosts}
-    }
-    
-    .viasrc {display: none;}
-    
-    header .title {display: none;}
-    .controls-icon, .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;}
-    .mobile-controls {display: block;}
-    
-    #k {display: none;}
-    #m {display: block;}
-}
-
-@media only screen and (max-height: 760px) {
-    aside nav {max-height: 175px; overflow-y: auto;}
-}
-
-{CustomCSS}
-
-</style>
+    "></script>
 </head>
-
-<body class="load-in">
-
-<!----- HEADER ----->
-
-<header class="align-flex">
-    <div id="updates-button-wrap">
-        {block:ifUpdatesTab}<a class="updates-button" title="updates">
-            <svg xmlns="https://www.w3.org/2000/svg" class="bell-icon" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
-            <svg xmlns="https://www.w3.org/2000/svg" class="close-icon" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
-        </a>{/block:ifUpdatesTab}
+  <body class="transition-enabled">  <div class='page-background-video page-background-video-with-panel'>
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <div class="nav-container">
+            <nav data-hover-hint="nav">
+                <div class="gallery-title"><a href="/projects" class="active">Design</a></div>
+      <div class="page-title">
+        <a href="/photos" >Photography</a>
+      </div>
+      <div class="page-title">
+        <a href="/about-me" >About me</a>
+      </div>
+      <div class="page-title">
+        <a href="/contact" >Contact</a>
+      </div>
+            </nav>
+          </div>
     </div>
-    <div class="title"><a href="/">{Title}</a></div>
-    <div class="controls-icon"><svg xmlns="https://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg></div>
-    
-    <div class="mobile-controls">
-        <a href="https://www.tumblr.com/message/{Name}" title="message"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg></a>
-        <a href="https://www.tumblr.com/dashboard" title="dashboard"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/></svg></a>
-        <a href="https://www.tumblr.com/follow/{Name}" title="follow"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></a>
-    </div>
-</header>
-
-<!----- UPDATES TAB ----->
-
-{block:ifUpdatesTab}
-<div id="updates-tab">
-    <div class="updates-container">
-        <div class="subtitle navbg">Updates</div>
-            {block:ifUpdateText}<div class="updates-text">{text:Update Text}</div>{/block:ifUpdateText}
-    </div>
-    <div class="updates-container" id="currently">
-        <div class="subtitle navbg">Currently</div>
-        <div class="updates-text">
-            {block:ifWatching}<li>
-                <span class="upper">watching:</span>
-                {text:Watching}
-            </li>{/block:ifWatching}
-            {block:ifReading}<li>
-                <span class="upper">reading:</span>
-                {text:Reading}
-            </li>{/block:ifReading}
-            {block:ifListeningTo}<li>
-                <span class="upper">listening to:</span>
-                {text:Listening To}
-            </li>{/block:ifListeningTo}
-            {block:ifPlaying}<li>
-                <span class="upper">playing:</span>
-                {text:Playing}
-            </li>{/block:ifPlaying}
-        </div>
-    </div>
-</div>
-{/block:ifUpdatesTab}
-
-<main class="{select:sidebar position}">
-
-<!----- SIDEBAR ----->
-
-<aside>
-    {block:ifShowIcon}<img src="{PortraitURL-128}" class="icon">{/block:ifShowIcon}
-    <div class="sidebar">
-        {block:ifSidebarImage}<img src="{image:Sidebar}" id="side-img">{/block:ifSidebarImage}
-        <div id="description">{Description}</div>
-        <nav class="upper infobg">
-            {block:ifHomeLink}<li><a href="/">{text:Home Link}</a></li>{/block:ifHomeLink}
-            {block:AskEnabled}{block:ifAskLink}<li><a href="/ask">{text:Ask Link}</a></li>{/block:ifAskLink}{/block:AskEnabled}
-            {block:ifArchiveLink}<li><a href="/archive">{text:Archive Link}</a></li>{/block:ifArchiveLink}
-            {block:SubmissionsEnabled}{block:ifSubmitLink}<li><a href="/submit">{text:Submit Link}</a></li>{/block:ifSubmitLink}{/block:SubmissionsEnabled}
-            {block:ifLink1}<li><a href="{text:Link 1 URL}">{text:Link 1}</a></li>{/block:ifLink1}
-            {block:ifLink2}<li><a href="{text:Link 2 URL}">{text:Link 2}</a></li>{/block:ifLink2}
-            {block:ifLink3}<li><a href="{text:Link 3 URL}">{text:Link 3}</a></li>{/block:ifLink3}
-            {block:ifLink4}<li><a href="{text:Link 4 URL}">{text:Link 4}</a></li>{/block:ifLink4}
-            {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-        </nav>
-    </div>
-</aside>
-
-<!----- POST CONTAINERS ----->
-
-<section id="posts-container">
-
-{block:TagPage}
-<article class="td-page navbg">
-    {TotalPages} pages of posts tagged with <span>#{Tag}</span>
-</article>
-{/block:TagPage}
- 
-{block:DayPage}
-<article class="td-page navbg">
-    Viewing posts made on <span>{Month} {DayOfMonth}, {Year}</span>
-</article>
-{/block:DayPage}
- 
-{block:SearchPage}
-<article class="td-page navbg">
-    {lang:Showing SearchResultCount results for SearchQuery 2}
-</article>
-{/block:SearchPage}
-
-<!----- POSTS ----->
-
-{block:posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
-<article>
-
-<!-- top post info -->
-
-{block:ifShowReblogInfo}
-    {block:RebloggedFrom}<div class="viasrc">
-        <a href="{ReblogParentURL}" title="via {ReblogParentName}"><img src="{ReblogParentPortraitURL-64}" class="icon"/></a>
-        <a href="{ReblogRootURL}" title="originally {ReblogRootName}"><img src="{ReblogRootPortraitURL-64}" class="icon"/></a>
-    </div>{/block:RebloggedFrom}
-{/block:ifShowReblogInfo}
-
-<!----- MAIN POST CONTENT ----->
-
-<div class="posts main">
-
-{block:PinnedPostLabel}
-<div class="pin-post">
-    <a href="{Permalink}">
-        <svg xmlns="https://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px" fill="#000000"><g><rect fill="none" height="20" width="20" x="0"/></g><g><path d="M15,10c-1.1,0-2-0.9-2-2V4h0.5C13.78,4,14,3.78,14,3.5C14,3.22,13.78,3,13.5,3h-7C6.22,3,6,3.22,6,3.5C6,3.78,6.22,4,6.5,4 H7v4c0,1.1-0.9,2-2,2v1h4.5v5.5L10,17l0.5-0.5V11H15V10z M7.23,10C7.71,9.47,8,8.77,8,8V4h4v4c0,0.77,0.29,1.47,0.77,2H7.23z"/></g></svg>
-        <span class="upper">{PinnedPostLabel}</span>
+  </div>
+          <div class="masthead js-masthead-fixed" data-context="page.masthead"  data-hover-hint="mastheadOptions">
+            <div class="masthead-contents">
+              <div class="masthead-text js-masthead-text">
+                <div data-context="page.masthead" data-hover-hint="mastheadTitle"><h1 decorator="inlineTextEditable" contenteditable="false" class="js-inline-text-editable preserve-whitespace main-text rich-text module-text" data-text-keypath="customizations.masthead.title.text" value="Hi, welcome to my portfolio!">Hi, welcome to my portfolio!</h1></div>
+                
+                <div class="masthead-buttons">
+                  
+                </div>
+                  <div class="social masthead-social" data-context="page.masthead" data-hover-hint="mastheadSocialIcons">
+                    <ul>
+                            <li>
+                              <a href="http://be.net/matgoms" target="_blank">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" class="icon"><path id="path-1" d="M18.83,14.38a2.78,2.78,0,0,0,.65,1.9,2.31,2.31,0,0,0,1.7.59,2.31,2.31,0,0,0,1.38-.41,1.79,1.79,0,0,0,.71-0.87h2.31a4.48,4.48,0,0,1-1.71,2.53,5,5,0,0,1-2.78.76,5.53,5.53,0,0,1-2-.37,4.34,4.34,0,0,1-1.55-1,4.77,4.77,0,0,1-1-1.63,6.29,6.29,0,0,1,0-4.13,4.83,4.83,0,0,1,1-1.64A4.64,4.64,0,0,1,19.09,9a4.86,4.86,0,0,1,2-.4A4.5,4.5,0,0,1,23.21,9a4.36,4.36,0,0,1,1.5,1.3,5.39,5.39,0,0,1,.84,1.86,7,7,0,0,1,.18,2.18h-6.9Zm3.67-3.24A1.94,1.94,0,0,0,21,10.6a2.26,2.26,0,0,0-1,.22,2,2,0,0,0-.66.54,1.94,1.94,0,0,0-.35.69,3.47,3.47,0,0,0-.12.65h4.29A2.75,2.75,0,0,0,22.5,11.14ZM18.29,6h5.36V7.35H18.29V6ZM13.89,17.7a4.4,4.4,0,0,1-1.51.7,6.44,6.44,0,0,1-1.73.22H4.24V5.12h6.24a7.7,7.7,0,0,1,1.73.17,3.67,3.67,0,0,1,1.33.56,2.6,2.6,0,0,1,.86,1,3.74,3.74,0,0,1,.3,1.58,3,3,0,0,1-.46,1.7,3.33,3.33,0,0,1-1.35,1.12,3.19,3.19,0,0,1,1.82,1.26,3.79,3.79,0,0,1,.59,2.17,3.79,3.79,0,0,1-.39,1.77A3.24,3.24,0,0,1,13.89,17.7ZM11.72,8.19a1.25,1.25,0,0,0-.45-0.47,1.88,1.88,0,0,0-.64-0.24,5.5,5.5,0,0,0-.76-0.05H7.16v3.16h3a2,2,0,0,0,1.28-.38A1.43,1.43,0,0,0,11.89,9,1.73,1.73,0,0,0,11.72,8.19ZM11.84,13a2.39,2.39,0,0,0-1.52-.45H7.16v3.73h3.11a3.61,3.61,0,0,0,.82-0.09A2,2,0,0,0,11.77,16a1.39,1.39,0,0,0,.47-0.54,1.85,1.85,0,0,0,.17-0.88A1.77,1.77,0,0,0,11.84,13Z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.linkedin.com/in/matgoms/" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
+                                  c0,0,0.1-9.8,0-10.8H16v1.5c0,0,0,0,0,0h0v0C16.4,9,17.2,7.9,19,7.9c2.3,0,4,1.5,4,4.9V19H19.6z M8.9,6.7L8.9,6.7
+                                  C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z"/>
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="http://instagram.com/matgoms" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <g>
+                                  <path d="M15,5.4c2.1,0,2.4,0,3.2,0c0.8,0,1.2,0.2,1.5,0.3c0.4,0.1,0.6,0.3,0.9,0.6c0.3,0.3,0.5,0.5,0.6,0.9
+                                    c0.1,0.3,0.2,0.7,0.3,1.5c0,0.8,0,1.1,0,3.2s0,2.4,0,3.2c0,0.8-0.2,1.2-0.3,1.5c-0.1,0.4-0.3,0.6-0.6,0.9c-0.3,0.3-0.5,0.5-0.9,0.6
+                                    c-0.3,0.1-0.7,0.2-1.5,0.3c-0.8,0-1.1,0-3.2,0s-2.4,0-3.2,0c-0.8,0-1.2-0.2-1.5-0.3c-0.4-0.1-0.6-0.3-0.9-0.6
+                                    c-0.3-0.3-0.5-0.5-0.6-0.9c-0.1-0.3-0.2-0.7-0.3-1.5c0-0.8,0-1.1,0-3.2s0-2.4,0-3.2c0-0.8,0.2-1.2,0.3-1.5c0.1-0.4,0.3-0.6,0.6-0.9
+                                    c0.3-0.3,0.5-0.5,0.9-0.6c0.3-0.1,0.7-0.2,1.5-0.3C12.6,5.4,12.9,5.4,15,5.4 M15,4c-2.2,0-2.4,0-3.3,0c-0.9,0-1.4,0.2-1.9,0.4
+                                    c-0.5,0.2-1,0.5-1.4,0.9C7.9,5.8,7.6,6.2,7.4,6.8C7.2,7.3,7.1,7.9,7,8.7C7,9.6,7,9.8,7,12s0,2.4,0,3.3c0,0.9,0.2,1.4,0.4,1.9
+                                    c0.2,0.5,0.5,1,0.9,1.4c0.4,0.4,0.9,0.7,1.4,0.9c0.5,0.2,1.1,0.3,1.9,0.4c0.9,0,1.1,0,3.3,0s2.4,0,3.3,0c0.9,0,1.4-0.2,1.9-0.4
+                                    c0.5-0.2,1-0.5,1.4-0.9c0.4-0.4,0.7-0.9,0.9-1.4c0.2-0.5,0.3-1.1,0.4-1.9c0-0.9,0-1.1,0-3.3s0-2.4,0-3.3c0-0.9-0.2-1.4-0.4-1.9
+                                    c-0.2-0.5-0.5-1-0.9-1.4c-0.4-0.4-0.9-0.7-1.4-0.9c-0.5-0.2-1.1-0.3-1.9-0.4C17.4,4,17.2,4,15,4L15,4L15,4z"/>
+                                  <path d="M15,7.9c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S17.3,7.9,15,7.9L15,7.9z M15,14.7c-1.5,0-2.7-1.2-2.7-2.7
+                                    c0-1.5,1.2-2.7,2.7-2.7s2.7,1.2,2.7,2.7C17.7,13.5,16.5,14.7,15,14.7L15,14.7z"/>
+                                  <path d="M20.2,7.7c0,0.5-0.4,1-1,1s-1-0.4-1-1s0.4-1,1-1S20.2,7.2,20.2,7.7L20.2,7.7z"/>
+                                </g>
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://dribbble.com/matgoms" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 30 24" xml:space="preserve" class="icon"><path d="M15 20c-4.41 0-8-3.59-8-8s3.59-8 8-8c4.41 0 8 3.6 8 8S19.41 20 15 20L15 20z M21.75 13.1 c-0.23-0.07-2.12-0.64-4.26-0.29c0.89 2.5 1.3 4.5 1.3 4.87C20.35 16.6 21.4 15 21.8 13.1L21.75 13.1z M17.67 18.3 c-0.1-0.6-0.5-2.69-1.46-5.18c-0.02 0-0.03 0.01-0.05 0.01c-3.85 1.34-5.24 4.02-5.36 4.27c1.16 0.9 2.6 1.4 4.2 1.4 C15.95 18.8 16.9 18.6 17.7 18.3L17.67 18.3z M9.92 16.58c0.15-0.27 2.03-3.37 5.55-4.51c0.09-0.03 0.18-0.06 0.27-0.08 c-0.17-0.39-0.36-0.78-0.55-1.16c-3.41 1.02-6.72 0.98-7.02 0.97c0 0.1 0 0.1 0 0.21C8.17 13.8 8.8 15.4 9.9 16.58L9.92 16.6 z M8.31 10.61c0.31 0 3.1 0 6.32-0.83c-1.13-2.01-2.35-3.7-2.53-3.95C10.18 6.7 8.8 8.5 8.3 10.61L8.31 10.61z M13.4 5.4 c0.19 0.2 1.4 1.9 2.5 4c2.43-0.91 3.46-2.29 3.58-2.47C18.32 5.8 16.7 5.2 15 5.18C14.45 5.2 13.9 5.2 13.4 5.4 L13.4 5.37z M20.29 7.69c-0.14 0.19-1.29 1.66-3.82 2.69c0.16 0.3 0.3 0.7 0.5 0.99c0.05 0.1 0.1 0.2 0.1 0.3 c2.27-0.29 4.5 0.2 4.8 0.22C21.82 10.3 21.2 8.8 20.3 7.69L20.29 7.69z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="mailto:matgoms@gmail.com">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                  <g>
+                                    <path d="M15,13L7.1,7.1c0-0.5,0.4-1,1-1h13.8c0.5,0,1,0.4,1,1L15,13z M15,14.8l7.9-5.9v8.1c0,0.5-0.4,1-1,1H8.1c-0.5,0-1-0.4-1-1 V8.8L15,14.8z"/>
+                                  </g>
+                                </svg>
+                              </a>
+                            </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="masthead masthead-placeholder">
+            <div class="masthead-contents">
+              <div class="masthead-text js-masthead-text">
+                <div data-context="page.masthead" data-hover-hint="mastheadTitle"><h1 decorator="inlineTextEditable" contenteditable="false" class="js-inline-text-editable preserve-whitespace main-text rich-text module-text" data-text-keypath="customizations.masthead.title.text" value="Hi, welcome to my portfolio!">Hi, welcome to my portfolio!</h1></div>
+                
+                <div class="masthead-buttons">
+                  
+                </div>
+                  <div class="social masthead-social" data-context="page.masthead" data-hover-hint="mastheadSocialIcons">
+                    <ul>
+                            <li>
+                              <a href="http://be.net/matgoms" target="_blank">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" class="icon"><path id="path-1" d="M18.83,14.38a2.78,2.78,0,0,0,.65,1.9,2.31,2.31,0,0,0,1.7.59,2.31,2.31,0,0,0,1.38-.41,1.79,1.79,0,0,0,.71-0.87h2.31a4.48,4.48,0,0,1-1.71,2.53,5,5,0,0,1-2.78.76,5.53,5.53,0,0,1-2-.37,4.34,4.34,0,0,1-1.55-1,4.77,4.77,0,0,1-1-1.63,6.29,6.29,0,0,1,0-4.13,4.83,4.83,0,0,1,1-1.64A4.64,4.64,0,0,1,19.09,9a4.86,4.86,0,0,1,2-.4A4.5,4.5,0,0,1,23.21,9a4.36,4.36,0,0,1,1.5,1.3,5.39,5.39,0,0,1,.84,1.86,7,7,0,0,1,.18,2.18h-6.9Zm3.67-3.24A1.94,1.94,0,0,0,21,10.6a2.26,2.26,0,0,0-1,.22,2,2,0,0,0-.66.54,1.94,1.94,0,0,0-.35.69,3.47,3.47,0,0,0-.12.65h4.29A2.75,2.75,0,0,0,22.5,11.14ZM18.29,6h5.36V7.35H18.29V6ZM13.89,17.7a4.4,4.4,0,0,1-1.51.7,6.44,6.44,0,0,1-1.73.22H4.24V5.12h6.24a7.7,7.7,0,0,1,1.73.17,3.67,3.67,0,0,1,1.33.56,2.6,2.6,0,0,1,.86,1,3.74,3.74,0,0,1,.3,1.58,3,3,0,0,1-.46,1.7,3.33,3.33,0,0,1-1.35,1.12,3.19,3.19,0,0,1,1.82,1.26,3.79,3.79,0,0,1,.59,2.17,3.79,3.79,0,0,1-.39,1.77A3.24,3.24,0,0,1,13.89,17.7ZM11.72,8.19a1.25,1.25,0,0,0-.45-0.47,1.88,1.88,0,0,0-.64-0.24,5.5,5.5,0,0,0-.76-0.05H7.16v3.16h3a2,2,0,0,0,1.28-.38A1.43,1.43,0,0,0,11.89,9,1.73,1.73,0,0,0,11.72,8.19ZM11.84,13a2.39,2.39,0,0,0-1.52-.45H7.16v3.73h3.11a3.61,3.61,0,0,0,.82-0.09A2,2,0,0,0,11.77,16a1.39,1.39,0,0,0,.47-0.54,1.85,1.85,0,0,0,.17-0.88A1.77,1.77,0,0,0,11.84,13Z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.linkedin.com/in/matgoms/" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
+                                  c0,0,0.1-9.8,0-10.8H16v1.5c0,0,0,0,0,0h0v0C16.4,9,17.2,7.9,19,7.9c2.3,0,4,1.5,4,4.9V19H19.6z M8.9,6.7L8.9,6.7
+                                  C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z"/>
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="http://instagram.com/matgoms" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <g>
+                                  <path d="M15,5.4c2.1,0,2.4,0,3.2,0c0.8,0,1.2,0.2,1.5,0.3c0.4,0.1,0.6,0.3,0.9,0.6c0.3,0.3,0.5,0.5,0.6,0.9
+                                    c0.1,0.3,0.2,0.7,0.3,1.5c0,0.8,0,1.1,0,3.2s0,2.4,0,3.2c0,0.8-0.2,1.2-0.3,1.5c-0.1,0.4-0.3,0.6-0.6,0.9c-0.3,0.3-0.5,0.5-0.9,0.6
+                                    c-0.3,0.1-0.7,0.2-1.5,0.3c-0.8,0-1.1,0-3.2,0s-2.4,0-3.2,0c-0.8,0-1.2-0.2-1.5-0.3c-0.4-0.1-0.6-0.3-0.9-0.6
+                                    c-0.3-0.3-0.5-0.5-0.6-0.9c-0.1-0.3-0.2-0.7-0.3-1.5c0-0.8,0-1.1,0-3.2s0-2.4,0-3.2c0-0.8,0.2-1.2,0.3-1.5c0.1-0.4,0.3-0.6,0.6-0.9
+                                    c0.3-0.3,0.5-0.5,0.9-0.6c0.3-0.1,0.7-0.2,1.5-0.3C12.6,5.4,12.9,5.4,15,5.4 M15,4c-2.2,0-2.4,0-3.3,0c-0.9,0-1.4,0.2-1.9,0.4
+                                    c-0.5,0.2-1,0.5-1.4,0.9C7.9,5.8,7.6,6.2,7.4,6.8C7.2,7.3,7.1,7.9,7,8.7C7,9.6,7,9.8,7,12s0,2.4,0,3.3c0,0.9,0.2,1.4,0.4,1.9
+                                    c0.2,0.5,0.5,1,0.9,1.4c0.4,0.4,0.9,0.7,1.4,0.9c0.5,0.2,1.1,0.3,1.9,0.4c0.9,0,1.1,0,3.3,0s2.4,0,3.3,0c0.9,0,1.4-0.2,1.9-0.4
+                                    c0.5-0.2,1-0.5,1.4-0.9c0.4-0.4,0.7-0.9,0.9-1.4c0.2-0.5,0.3-1.1,0.4-1.9c0-0.9,0-1.1,0-3.3s0-2.4,0-3.3c0-0.9-0.2-1.4-0.4-1.9
+                                    c-0.2-0.5-0.5-1-0.9-1.4c-0.4-0.4-0.9-0.7-1.4-0.9c-0.5-0.2-1.1-0.3-1.9-0.4C17.4,4,17.2,4,15,4L15,4L15,4z"/>
+                                  <path d="M15,7.9c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S17.3,7.9,15,7.9L15,7.9z M15,14.7c-1.5,0-2.7-1.2-2.7-2.7
+                                    c0-1.5,1.2-2.7,2.7-2.7s2.7,1.2,2.7,2.7C17.7,13.5,16.5,14.7,15,14.7L15,14.7z"/>
+                                  <path d="M20.2,7.7c0,0.5-0.4,1-1,1s-1-0.4-1-1s0.4-1,1-1S20.2,7.2,20.2,7.7L20.2,7.7z"/>
+                                </g>
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://dribbble.com/matgoms" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 30 24" xml:space="preserve" class="icon"><path d="M15 20c-4.41 0-8-3.59-8-8s3.59-8 8-8c4.41 0 8 3.6 8 8S19.41 20 15 20L15 20z M21.75 13.1 c-0.23-0.07-2.12-0.64-4.26-0.29c0.89 2.5 1.3 4.5 1.3 4.87C20.35 16.6 21.4 15 21.8 13.1L21.75 13.1z M17.67 18.3 c-0.1-0.6-0.5-2.69-1.46-5.18c-0.02 0-0.03 0.01-0.05 0.01c-3.85 1.34-5.24 4.02-5.36 4.27c1.16 0.9 2.6 1.4 4.2 1.4 C15.95 18.8 16.9 18.6 17.7 18.3L17.67 18.3z M9.92 16.58c0.15-0.27 2.03-3.37 5.55-4.51c0.09-0.03 0.18-0.06 0.27-0.08 c-0.17-0.39-0.36-0.78-0.55-1.16c-3.41 1.02-6.72 0.98-7.02 0.97c0 0.1 0 0.1 0 0.21C8.17 13.8 8.8 15.4 9.9 16.58L9.92 16.6 z M8.31 10.61c0.31 0 3.1 0 6.32-0.83c-1.13-2.01-2.35-3.7-2.53-3.95C10.18 6.7 8.8 8.5 8.3 10.61L8.31 10.61z M13.4 5.4 c0.19 0.2 1.4 1.9 2.5 4c2.43-0.91 3.46-2.29 3.58-2.47C18.32 5.8 16.7 5.2 15 5.18C14.45 5.2 13.9 5.2 13.4 5.4 L13.4 5.37z M20.29 7.69c-0.14 0.19-1.29 1.66-3.82 2.69c0.16 0.3 0.3 0.7 0.5 0.99c0.05 0.1 0.1 0.2 0.1 0.3 c2.27-0.29 4.5 0.2 4.8 0.22C21.82 10.3 21.2 8.8 20.3 7.69L20.29 7.69z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="mailto:matgoms@gmail.com">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                  <g>
+                                    <path d="M15,13L7.1,7.1c0-0.5,0.4-1,1-1h13.8c0.5,0,1,0.4,1,1L15,13z M15,14.8l7.9-5.9v8.1c0,0.5-0.4,1-1,1H8.1c-0.5,0-1-0.4-1-1 V8.8L15,14.8z"/>
+                                  </g>
+                                </svg>
+                              </a>
+                            </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <header class="site-header">
+          <div class="logo-container">
+              <div class="logo-wrap" data-hover-hint="logo">
+                    <div class="logo e2e-site-logo-text logo-image  ">
+    <a href="/projects" class="image-normal image-link">
+      <img src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/90af2112-a266-40e2-90d8-6a259556074c_rwc_0x0x200x200x4096.gif?h=f01de486f2108b6c9ad31b4c2516c648" alt="Matheus Gomes">
     </a>
 </div>
-{/block:PinnedPostLabel}
-
-{block:Text}
-{block:Title}<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
-{block:NotReblog}
-    <li class="caption ogcap text-cap">
-        <div class="captext">{Body}</div>
-    </li>
-{/block:NotReblog}
-{block:RebloggedFrom}{block:Reblogs}
-    <li class="caption rbcap text-cap">
-        <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-        <div class="captext">{Body}</div>
-    </li>
-{/block:Reblogs}{/block:RebloggedFrom}
-{/block:Text}
-
-{block:Link}
-<a href="{URL}" class="link-wrap" style="background:url({block:Thumbnail}{Thumbnail-HighRes}{/block:Thumbnail}); background-position: center; background-size: cover;">
-    <div class="link">
-        <div class="title">{Name}</div>
-        {block:Host}<div class="link-host upper"><svg xmlns="https://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/></svg>{Host}</div>{/block:Host}
+              </div>
+  <div class="hamburger-click-area js-hamburger">
+    <div class="hamburger">
+      <i></i>
+      <i></i>
+      <i></i>
     </div>
-</a>
-{block:Description}
-    {block:NotReblog}
-        <li class="caption captop ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="captext">{Description}</div>
-        </li>
-    {/block:NotReblog}
-{/block:Description}
-{block:RebloggedFrom}{block:Reblogs}
-        <li class="caption rbcap captop {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-            <div class="captext">{Body}</div>
-        </li>
-{/block:Reblogs}{/block:RebloggedFrom}
-{/block:Link}
+  </div>
+          </div>
+              <div class="nav-container">
+                <nav data-hover-hint="nav">
+                <div class="gallery-title"><a href="/projects" class="active">Design</a></div>
+      <div class="page-title">
+        <a href="/photos" >Photography</a>
+      </div>
+      <div class="page-title">
+        <a href="/about-me" >About me</a>
+      </div>
+      <div class="page-title">
+        <a href="/contact" >Contact</a>
+      </div>
+                </nav>
+              </div>
+        </header>
+        <main>
+          <section class="project-covers" data-context="page.gallery.covers">
+            <a class="project-cover js-project-cover-touch hold-space" href="/homerepair" data-context="pages" data-identity="id:p642c2faa72abf404592ce14e0efd434db0ce5a94773db14ff423a" data-hover-hint="galleryPageCover" data-hover-hint-id="p642c2faa72abf404592ce14e0efd434db0ce5a94773db14ff423a">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
 
-{block:Photo}
-<div class="photo">
-    {LinkOpenTag}<a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" loading="lazy"></a>{LinkCloseTag}
-</div>
-{block:Caption}
-    {block:NotReblog}
-        <li class="caption captop ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="captext">{Caption}</div>
-        </li>
-    {/block:NotReblog}
-    {block:Reblogs}
-        <li class="caption captop rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-            <div class="captext">{Body}</div>
-        </li>
-    {/block:Reblogs}
-{/block:Caption}
-{/block:Photo}
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_carw_202x158x32.jpg?h=658c324703044f5d56c2a059e04c6766"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_car_202x158.jpg?h=efba997c89058729cbf053d5ccba01d7"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_carw_202x158x640.jpg?h=b70a6419fff89fec38c421ad5c669780 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_carw_202x158x1280.jpg?h=b5add949af0443fbb74a6e83149944ab 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_carw_202x158x1366.jpg?h=e4420063d7e0a2d4582861477258d2e4 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_carw_202x158x1920.jpg?h=602de3eda8cbd3a719087fe7271500aa 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_carw_202x158x2560.jpg?h=ba860ecdd4feaed10678b2407222563c 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/f9dedddc-15ab-4cdd-b7ba-01db69957c9b_carw_202x158x5120.jpg?h=da5781a79bba5fd43c9334376b6afb55 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">HomeRepair</div>
+                        <div class="date">April, 2023</div>
+                        <div class="custom1 preserve-whitespace">UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/design-system-genera" data-context="pages" data-identity="id:p62a3304ddfd06b8f8a46142d82689449423db8fd1e51d6564351f" data-hover-hint="galleryPageCover" data-hover-hint-id="p62a3304ddfd06b8f8a46142d82689449423db8fd1e51d6564351f">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
 
-{block:Panorama}
-<div class="photo">
-    {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">{LinkCloseTag}
-</div>
-{block:Caption}
-    {block:NotReblog}
-        <li class="caption captop ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="captext">{Caption}</div>
-        </li>
-    {/block:NotReblog}
-    {block:Reblogs}
-        <li class="caption captop rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-            <div class="captext">{Body}</div>
-        </li>
-    {/block:Reblogs}
-{/block:Caption}
-{/block:Panorama}
- 
-{block:Photoset}
-<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" loading="lazy"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
-{block:Caption}
-    {block:NotReblog}
-    <li class="caption captop ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-        <div class="captext">{Caption}</div>
-    </li>
-    {/block:NotReblog}
-    {block:Reblogs}
-        <li class="caption captop rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-            <div class="captext">{Body}</div>
-        </li>
-    {/block:Reblogs}
-{/block:Caption}
-{/block:Photoset}
- 
-{block:Video}
-<div class="video">{Video-700}</div>
-{block:Caption}
-    {block:NotReblog}
-    <li class="caption captop ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-        <div class="captext">{Caption}</div>
-    </li>
-    {/block:NotReblog}
-    {block:Reblogs}
-        <li class="caption captop rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-            <div class="captext">{Body}</div>
-        </li>
-    {/block:Reblogs}
-{/block:Caption}
-{/block:Video}
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x32.png?h=15e76e5971a3b14b10cb80e5fcb380be"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x1536.png?h=cabfb8c46f4b247f2a3c3c646e162bc6"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x640.png?h=ba6d1543794532a75daea9300f505d3c 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x1280.png?h=e85c22925678581a85c3a649ca5b7dee 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x1366.png?h=88b606fde28cf9255e03c24713061a57 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x1920.png?h=24d724d464ee9f22c6c18bc13a034366 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x2560.png?h=0a30cd59caa421e71eb17c86e8063bdd 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/acc1fa72-2735-4105-a554-9ca6c36a8a66_rwc_1599x209x1536x1201x5120.png?h=09f95f31d2d41f102d51cb43facd56a1 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Design System - Genera</div>
+                        <div class="date">June, 2022</div>
+                        <div class="custom1 preserve-whitespace">UX/UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/design-thinking-challenge" data-context="pages" data-identity="id:p6319efada4d676f25b9e3f928f34639b65020e5c05b5aae8e61c3" data-hover-hint="galleryPageCover" data-hover-hint-id="p6319efada4d676f25b9e3f928f34639b65020e5c05b5aae8e61c3">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
 
-{block:Quote}
-<div class="quote navbg">{Quote}</div>
-{block:Source}<div class="source upper">{Source}</div>{/block:Source}
-{/block:Quote}
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_carw_202x158x32.jpg?h=e55a18505dc5cbfe82ad6d1ecde142ee"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_car_202x158.jpg?h=91fa40a4d564a3107b24ea6e3ba9f506"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_carw_202x158x640.jpg?h=f2d4f841204c94551427c8805491c189 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_carw_202x158x1280.jpg?h=8244da49b69a898b30f6d437a2eb93d5 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_carw_202x158x1366.jpg?h=f12442a148b2bb7ad8e38ed3869f20b2 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_carw_202x158x1920.jpg?h=3fa88d5b8f374acac3b6c9beb3e49454 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_carw_202x158x2560.jpg?h=5b7226c15e56102b60e81ac875209dc2 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/08cfe2b6-d3eb-482f-9ed2-1c61cb751aab_carw_202x158x5120.jpg?h=bd216126a91fa6328caaa9e961cba64c 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Design Thinking Challenge</div>
+                        <div class="date">September, 2022</div>
+                        <div class="custom1 preserve-whitespace">UX/UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/app-gardenfy" data-context="pages" data-identity="id:p63a588079cc2e9a024cd1e59816c3fcfbcc2dca71743869818ee5" data-hover-hint="galleryPageCover" data-hover-hint-id="p63a588079cc2e9a024cd1e59816c3fcfbcc2dca71743869818ee5">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
 
-{block:Chat}
-{block:Title}<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
-<ul class="chat">{block:Lines}
-    <li class="line">
-        {block:Label}<span class="subtitle chatter">{Label}</span>{/block:Label}
-        {Line}
-    </li>
-{/block:Lines}</ul>
-{/block:Chat}
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_carw_202x158x32.jpg?h=466fd4af070f0d5ab773c04b1f16685e"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_car_202x158.jpg?h=93a8ba20b6ba4e0903af5f7aa25a71b5"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_carw_202x158x640.jpg?h=cd9aab18b52f4e6ace525e03f00f4c11 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_carw_202x158x1280.jpg?h=c699bd9652a4e79dbc10bfc8ba4982c5 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_carw_202x158x1366.jpg?h=d40c77b7c33edd17cb87db04d1c73661 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_carw_202x158x1920.jpg?h=a2543e6fb5a2cf6d08d5399c53047cd1 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_carw_202x158x2560.jpg?h=2b756b8753f3b9ffb8729f727f497186 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/16d1da62-f58c-4f10-b519-cbd44a5f4783_carw_202x158x5120.jpg?h=2905992483264ea9aa8b32c744246ef0 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">App Gardenfy</div>
+                        <div class="date">December, 2022</div>
+                        <div class="custom1 preserve-whitespace">UX/UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/redesign-blz-premium" data-context="pages" data-identity="id:p62b0819f33cdb610e508af9f5cbc2cc8333cb967afb398986f245" data-hover-hint="galleryPageCover" data-hover-hint-id="p62b0819f33cdb610e508af9f5cbc2cc8333cb967afb398986f245">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
 
-{block:Answer}
-<div class="ask-post navbg">
-    <div class="asker-wrap">
-        <img src="{AskerPortraitURL-128}" class="askicon icon">
-        <div class="asker">
-            <div class="subtitle">{Asker}</div>
-            <div class="upper">sent a message</div>
-        </div>
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_carw_202x158x32.jpg?h=ac14171d1c012dd473a121c0d12bcbc5"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_car_202x158.jpg?h=fecb1725773a4a5737264885a2b98b0e"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_carw_202x158x640.jpg?h=4067a660e3b036278ac6bd64dc9ca3c0 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_carw_202x158x1280.jpg?h=4254070750c03a11740551d9d0386b50 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_carw_202x158x1366.jpg?h=193672531b4a9055b2022160f15aa3d2 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_carw_202x158x1920.jpg?h=602f338dd8af57725e55dfc226b05d5d 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_carw_202x158x2560.jpg?h=17465db461588c1a0c1436825efdbaa2 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/384d524b-efb8-4b05-bf13-23a730a414af_carw_202x158x5120.jpg?h=572e5c3aec841f139061e0ec2c8835cd 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Redesign - Blz premium</div>
+                        <div class="date">June, 2022</div>
+                        <div class="custom1 preserve-whitespace">UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/website-cashbid" data-context="pages" data-identity="id:p62bb132b545d998d7bf096212d90927feec2ac5c1a950270d0280" data-hover-hint="galleryPageCover" data-hover-hint-id="p62bb132b545d998d7bf096212d90927feec2ac5c1a950270d0280">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_carw_202x158x32.jpg?h=9ce4f50ad5f24d243a7463d2aa46d956"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_car_202x158.jpg?h=a76a66cb24f8e57139d0c4fbfbb1448b"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_carw_202x158x640.jpg?h=ec5b4eeab8735be9908fd1bb7a3122e7 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_carw_202x158x1280.jpg?h=a9ad3dcf4a6dfdcb113b3c395dc4e388 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_carw_202x158x1366.jpg?h=8bc16bfc72c8ec4e5d2aaf66120fc014 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_carw_202x158x1920.jpg?h=c88c89f77130600fb5b094942a225444 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_carw_202x158x2560.jpg?h=461a27a1923ac9e1d96cd66c65fb2c88 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/be08f078-dc20-4f03-8ce4-f2254aa8f664_carw_202x158x5120.jpg?h=761bee630e9e614fd61c312d360bbf43 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Website - CashBid</div>
+                        <div class="date">June, 2021</div>
+                        <div class="custom1 preserve-whitespace">UX/UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/design-challenge" data-context="pages" data-identity="id:p63355b92474f778ca48493403ca955918e0884ffa814704cd642b" data-hover-hint="galleryPageCover" data-hover-hint-id="p63355b92474f778ca48493403ca955918e0884ffa814704cd642b">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_carw_202x158x32.jpg?h=8b2c89a736cdb0c8e782fb264e8cb856"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_car_202x158.jpg?h=8751cc26d46c851e67b8b6fc763dfdc2"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_carw_202x158x640.jpg?h=77c0c3578c99a25d73eca6682799f0a5 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_carw_202x158x1280.jpg?h=98233348057fc9b413d9c7818db881dd 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_carw_202x158x1366.jpg?h=298389c80d5f5726696e2bf0c11bdc1d 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_carw_202x158x1920.jpg?h=51e1ce2973d2703bb7787744ceba9c9e 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_carw_202x158x2560.jpg?h=215fc738c5d46e3bd45215d630b4000f 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8d3068b2-96db-47c0-ada3-0feceba81ab7_carw_202x158x5120.jpg?h=ca8c0dea0481dbaffe86e61c16d6d890 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Problem-solving Challenge</div>
+                        <div class="date">September, 2021</div>
+                        <div class="custom1 preserve-whitespace">UX/UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/website-redesign-sfc" data-context="pages" data-identity="id:p6042b6902880ff6a41b018561ae7bb418b431e34a244446400f97" data-hover-hint="galleryPageCover" data-hover-hint-id="p6042b6902880ff6a41b018561ae7bb418b431e34a244446400f97">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_carw_202x158x32.jpg?h=eb344f1448831275d578231ee60aeb40"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_car_202x158.jpg?h=850ad0a0ca47e4d891aab4b1b14e13cb"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_carw_202x158x640.jpg?h=703f4a1cd3e541f8ae8fcf8a9e24cca6 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_carw_202x158x1280.jpg?h=97e960b33f40043634b5910d188f4c00 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_carw_202x158x1366.jpg?h=cda891e5a7015137682c1b3f809383d7 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_carw_202x158x1920.jpg?h=337313920d5fa549416bcc56f14037c3 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_carw_202x158x2560.jpg?h=4ef185eaf1ce0ad9449a6e773361f946 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/3c4e03bf-8999-43fe-a530-c0fd0a44a2c6_carw_202x158x5120.jpg?h=76db995a2ffeeaed63bf8cd16ab39fcb 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Website Redesign - Santos FC</div>
+                        <div class="date">February, 2021</div>
+                        <div class="custom1 preserve-whitespace">UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/landing-page-ciano" data-context="pages" data-identity="id:p62af17a0d2e811abf529d05fee1ac373364577de3926b13027433" data-hover-hint="galleryPageCover" data-hover-hint-id="p62af17a0d2e811abf529d05fee1ac373364577de3926b13027433">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_carw_202x158x32.png?h=c224dd623bdf978c49b983c672e335fd"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_car_202x158.png?h=7ae505b44cd833eb560ca22df05892b6"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_carw_202x158x640.png?h=1e8a193c9ca4db9abb1bf8a1c4da0e0a 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_carw_202x158x1280.png?h=b851cce2796a902b4d7578f66ac7b1e2 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_carw_202x158x1366.png?h=7e2386274002092d040716763f73799d 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_carw_202x158x1920.png?h=0d008ccc443c1001285f154ff2c5153d 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_carw_202x158x2560.png?h=5e5140d2b529e033d06e8a7a839673b1 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/06d53def-2784-43ea-aaec-23075f3659e8_carw_202x158x5120.png?h=bcc24c00a470406b4c682d0c687e03ed 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Landing Page - Ciano</div>
+                        <div class="date">June, 2022</div>
+                        <div class="custom1 preserve-whitespace">UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/landing-page-wonder" data-context="pages" data-identity="id:p62854d3d61c5e80bc3a009a0b828e2b55e6df7ac5725e78dfd5e3" data-hover-hint="galleryPageCover" data-hover-hint-id="p62854d3d61c5e80bc3a009a0b828e2b55e6df7ac5725e78dfd5e3">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x32.png?h=9b5d6f23a6cbd58f80c3282412f020bf"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x1103.png?h=f247d225ea1d730fc09de17515b99e39"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x640.png?h=4683c888ccf696850a5ff6d365aa26ad 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x1280.png?h=5dd4b374602002acac306f0634107c31 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x1366.png?h=a4b02494329216ac71f32e8898535c41 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x1103.png?h=f247d225ea1d730fc09de17515b99e39 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x1103.png?h=f247d225ea1d730fc09de17515b99e39 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/70c9355e-2ff1-4227-a3ed-0b8721e8f0e2_rwc_0x100x1103x863x1103.png?h=f247d225ea1d730fc09de17515b99e39 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Landing Page - Wonder Ipiranga</div>
+                        <div class="date">September, 2021</div>
+                        <div class="custom1 preserve-whitespace">UI Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/logo-design" data-context="pages" data-identity="id:p62c2ef3747df577f830c40e20510908204f7ffea8867f4a33b45f" data-hover-hint="galleryPageCover" data-hover-hint-id="p62c2ef3747df577f830c40e20510908204f7ffea8867f4a33b45f">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x32.png?h=4ee9b9d365648930d1453ac9c1c47eb9"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x625.png?h=e6fa1b4679bc8b151da42591637834b7"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x640.png?h=b59a73a2671ef5e50176690496fe35a0 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x625.png?h=e6fa1b4679bc8b151da42591637834b7 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x625.png?h=e6fa1b4679bc8b151da42591637834b7 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x625.png?h=e6fa1b4679bc8b151da42591637834b7 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x625.png?h=e6fa1b4679bc8b151da42591637834b7 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/9c80120e-9847-4a05-9d79-10f2625a0a07_rwc_258x378x625x489x625.png?h=e6fa1b4679bc8b151da42591637834b7 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Logo design</div>
+                        <div class="date">June, 2021</div>
+                        <div class="custom1 preserve-whitespace">Graphic Design, Branding</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/3d-modeling-lightsaber" data-context="pages" data-identity="id:p60215c581b569903c0763697fba179397de47744118418b0d42b1" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c581b569903c0763697fba179397de47744118418b0d42b1">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_carw_202x158x32.png?h=0cf265de23766b7b2349fd163260329e"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_car_202x158.png?h=4eb9be95dc59206773f765da575ce5e6"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_carw_202x158x640.png?h=f5a42cafb94d90b39bf658c235e29dde 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_carw_202x158x1280.png?h=b8d762dd0e75a7a1befe843936b220f5 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_carw_202x158x1366.png?h=965f3552ab0845d51a1447091d228a42 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_carw_202x158x1920.png?h=64b5731d5c443e7719e0528d45113c73 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_carw_202x158x2560.png?h=f6aa71add34c8707e2d0484bb916b532 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4421d3f0-7430-47b6-99cd-2f69b56c9a59_carw_202x158x5120.png?h=733ddedbd376b6fd7a3b422490a0a6d6 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">3D Modeling - Lightsaber</div>
+                        <div class="date">January, 2021</div>
+                        <div class="custom1 preserve-whitespace">3D Modeling, 3D Art, Industrial Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/redesign-weup" data-context="pages" data-identity="id:p60215c587cfc4ef1215cc249a250f1aa32baea4eb6d4e17de9bf5" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c587cfc4ef1215cc249a250f1aa32baea4eb6d4e17de9bf5">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_carw_202x158x32.png?h=16ab38feebe1aa7527e043b376778cbf"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_car_202x158.png?h=598e50a69d59c6ed31afa65830865c6a"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_carw_202x158x640.png?h=66f9ada65a6e7e98e6fda558dd56dbf8 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_carw_202x158x1280.png?h=3e9cb63287e001b97089d3ecd9d5b303 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_carw_202x158x1366.png?h=425ac34c2e3d45931862c8b6d10e41a0 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_carw_202x158x1920.png?h=0d1e1f3533a5535e8288728034e1a978 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_carw_202x158x2560.png?h=9a7d2353590a38340be6876f4ee88798 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fef15349-b582-421a-b49c-8902e04a69ba_carw_202x158x5120.png?h=7d482c6dbc88c8a75aa2f289466cd8c6 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Redesign WeUp</div>
+                        <div class="date">January, 2021</div>
+                        <div class="custom1 preserve-whitespace">UI/UX, Branding, 3D Motion</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/linhauni" data-context="pages" data-identity="id:p62854d3ce3dc54d1319bf62dcf5e35f4916a60ec2d167316a8871" data-hover-hint="galleryPageCover" data-hover-hint-id="p62854d3ce3dc54d1319bf62dcf5e35f4916a60ec2d167316a8871">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_carw_202x158x32.png?h=a00ff0aaf22b726afa44621a0d444375"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_car_202x158.png?h=37393aec1c0047259263de0b1e89e69f"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_carw_202x158x640.png?h=c7edf18882627a7b15338721c7d5d084 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_carw_202x158x1280.png?h=db2b4fcf9fda865f9f792d20f5b32d23 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_carw_202x158x1366.png?h=fef43d176f2201f2b1824b50124f4ddd 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_carw_202x158x1920.png?h=99f313572b21003b6bfd81e107e89240 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_carw_202x158x2560.png?h=0ed894d83a849b17cb10f09e44500ca3 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/39ade438-771e-476a-adaa-969650c4d77f_carw_202x158x5120.png?h=baf0b5e658d35210fe30bd1b19c60587 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">LinhaUni</div>
+                        <div class="date">August, 2021</div>
+                        <div class="custom1 preserve-whitespace">Graphic Design, UI/UX, Web Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/grupo-bisutti" data-context="pages" data-identity="id:p60215c5717aa9c87956908da504c0c38d2a68aaab76a6a4fb62e9" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5717aa9c87956908da504c0c38d2a68aaab76a6a4fb62e9">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_carw_202x158x32.png?h=8a322bccf980b2ed92bfbe82d34b6d97"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_car_202x158.png?h=91c279a55bffbf804594b77f2e2dd230"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_carw_202x158x640.png?h=3f942e10ba8da4e85751ccfcb1645a2e 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_carw_202x158x1280.png?h=046594a0afc18506c38a2b3002227b3b 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_carw_202x158x1366.png?h=c42dc8e28955a8a51dba4305fb8b10a9 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_carw_202x158x1920.png?h=ee3e9ba24580b549ce290a30a99a1194 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_carw_202x158x2560.png?h=68829213e1eb3facd78e6d5e56aba2a3 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/fe54083f-b77e-4d94-98fc-06fceda47792_carw_202x158x5120.png?h=e519d8a865ab75ac905aaa30d4a3a0e3 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Grupo Bisutti</div>
+                        <div class="date">November, 2020</div>
+                        <div class="custom1 preserve-whitespace">UI/UX, Web Design, Graphic Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/wordpress-template-persona-dermatologia" data-context="pages" data-identity="id:p60215c5e0bc0dc8ab056b336efae0856165241ed2d86de2920f71" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5e0bc0dc8ab056b336efae0856165241ed2d86de2920f71">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_carw_202x158x32.png?h=3cf3fabc2cfcd9645cfb704197ad712a"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_car_202x158.png?h=9bb45fccea7aa19e8d6344f4228345e9"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_carw_202x158x640.png?h=4306d59320a6e60a5e3af339e6481791 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_carw_202x158x1280.png?h=01582370e73fed4a468164006c9a7400 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_carw_202x158x1366.png?h=c446386a788e07e8b8cb892e0069dde3 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_carw_202x158x1920.png?h=fc7b7794f0f74e19a17a4d70ad9ccba8 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_carw_202x158x2560.png?h=8386a49a8fa120dfe92adb8c604a3a17 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8a29333a-252f-47f2-b745-3f88065e5372_carw_202x158x5120.png?h=568b410742b18a7d0464a874bf8e3fb2 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Wordpress template - Persona dermatologia</div>
+                        <div class="date">January, 2020</div>
+                        <div class="custom1 preserve-whitespace">Web Design, UI/UX, Graphic Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/wordpress-template-vital-medicina" data-context="pages" data-identity="id:p60215c5d9c7dfc4c48cefc520a184f5acab6ef8fbb8b2fed05362" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5d9c7dfc4c48cefc520a184f5acab6ef8fbb8b2fed05362">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_carw_202x158x32.png?h=19df642d7ded818964fe7391a3cd9bb2"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_car_202x158.png?h=728819e676cae1a03e8bff37f41e4231"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_carw_202x158x640.png?h=e1a1fbf9ec8f71eb4123769d60532801 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_carw_202x158x1280.png?h=29dc351fc5c5e3a6fb8b6419b564844a 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_carw_202x158x1366.png?h=7e337cf260e96ca27a7c230a80eab376 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_carw_202x158x1920.png?h=78a9e752472f60bc672930cd004dae0a 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_carw_202x158x2560.png?h=06efc2c1e3b8f66322bbf285978ab676 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/c63a3b51-9f31-454e-9861-7fa7e20e16b3_carw_202x158x5120.png?h=5986b1f4f0c5e9f0721242e33045e152 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Wordpress template - Vital medicina</div>
+                        <div class="date">January, 2020</div>
+                        <div class="custom1 preserve-whitespace">Graphic Design, Web Design, UI/UX</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/wordpress-template-clinica-ideal" data-context="pages" data-identity="id:p60215c5e6f84dce3d0554310108bed105bb4206a36b5597f5ad44" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5e6f84dce3d0554310108bed105bb4206a36b5597f5ad44">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_carw_202x158x32.png?h=5ef2a56c4dd6835e18561d6d6da05896"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_car_202x158.png?h=abc417d5a5cb1e1855f87c99e92178ce"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_carw_202x158x640.png?h=19a2f6fbb7cff54337f468ad0502967f 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_carw_202x158x1280.png?h=c9c7e9f7cd1f13e7a93e06672f988141 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_carw_202x158x1366.png?h=7ab18b3b3d0471f0fd4a0b659765828f 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_carw_202x158x1920.png?h=a7bbb210f9186bda64645abff1af6fd4 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_carw_202x158x2560.png?h=a61e5f8b9e7df3a1404b9790ac18332e 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/5db0f249-a832-4acf-b5a8-a5952db75c2e_carw_202x158x5120.png?h=0a4ce64c25f258df4a843fb7258451a2 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Wordpress template - Clínica ideal</div>
+                        <div class="date">January, 2020</div>
+                        <div class="custom1 preserve-whitespace">Graphic Design, UI/UX, Web Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/wordpress-template-damaris-sanches" data-context="pages" data-identity="id:p60215c5ed495fc62bdf17d27435a9e20509037b3c69ab2817dc58" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5ed495fc62bdf17d27435a9e20509037b3c69ab2817dc58">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_carw_202x158x32.png?h=f11aabadf320c80a0eeb8d14dd8d9f79"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_car_202x158.png?h=67d10b901558789ee3fa5925573c06ec"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_carw_202x158x640.png?h=31445125ef2375282baf084b3c78096b 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_carw_202x158x1280.png?h=251dfe6b06fb7ef159ef13ba7548640f 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_carw_202x158x1366.png?h=ca91d28ab3a48b60d2b3f09a302a300b 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_carw_202x158x1920.png?h=edd4a773068fd7fb88e9ebb13b15a177 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_carw_202x158x2560.png?h=f6becba7610b59ee7acfa3cd47feb7da 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/7d6672df-f72b-424a-abf2-e1185909c236_carw_202x158x5120.png?h=b0f0b0f57053977fc37c54f0f6088d5d 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Wordpress template - Damaris Sanches</div>
+                        <div class="date">January, 2020</div>
+                        <div class="custom1 preserve-whitespace">Web Design, Graphic Design, UI/UX</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/papai-noel-existe-ecorodovias" data-context="pages" data-identity="id:p60215c5798a9772d83e6e9745543bf03d93f6ee3b9cfe3c8a5cfb" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5798a9772d83e6e9745543bf03d93f6ee3b9cfe3c8a5cfb">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_carw_202x158x32.png?h=86cccfbf97b833790796e0c2c606ece2"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_car_202x158.png?h=712b21e7307ecbf0292656a04f61a5f6"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_carw_202x158x640.png?h=cf77101c66179dbc86cea05b077e3d11 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_carw_202x158x1280.png?h=e4fba1a54e17b22286310438cc8c4845 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_carw_202x158x1366.png?h=0988d8d8dc38aaf1737b02a2ade08322 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_carw_202x158x1920.png?h=1ce0139e33009ef97997f65361552b94 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_carw_202x158x2560.png?h=00f5568362bf265494650078c2a99d67 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/026d2852-de9a-491d-974d-d9483e31b5b1_carw_202x158x5120.png?h=b2d3028da97b2ef77d60072c83478114 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Papai Noel Existe - EcoRodovias</div>
+                        <div class="date">November, 2020</div>
+                        <div class="custom1 preserve-whitespace">Illustration, UI/UX, Web Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/guidebook-boreal" data-context="pages" data-identity="id:p60215c5cd2786734c73f07cdfa5b60db6e7378fcae9f2893c26d7" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5cd2786734c73f07cdfa5b60db6e7378fcae9f2893c26d7">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x32.png?h=9a9f9926d12c5cd75415c416760a3ab8"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x856.png?h=cc8a3d596b4a446301f383247a926d62"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x640.png?h=f2197f65f6f51ad0e7b13d64829fad77 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x856.png?h=cc8a3d596b4a446301f383247a926d62 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x856.png?h=cc8a3d596b4a446301f383247a926d62 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x856.png?h=cc8a3d596b4a446301f383247a926d62 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x856.png?h=cc8a3d596b4a446301f383247a926d62 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/4a1e3995-3716-4d61-9e9b-60c3a27283e9_rwc_151x140x856x642x856.png?h=cc8a3d596b4a446301f383247a926d62 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Guidebook - Boreal</div>
+                        <div class="date">May, 2019</div>
+                        <div class="custom1 preserve-whitespace">Branding, Graphic Design, Editorial Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/colegio-sao-judas-wordpress-template" data-context="pages" data-identity="id:p60215c5beb49cbed23519cadc3bdd62199c978c6356276fb5ec4d" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5beb49cbed23519cadc3bdd62199c978c6356276fb5ec4d">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_carw_202x158x32.png?h=434c358072bc2b9e90eeb2415694932a"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_car_202x158.png?h=25b65204776881eba7ba8fcafb733713"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_carw_202x158x640.png?h=662df79072ede38e4efc2cd20e8c7d22 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_carw_202x158x1280.png?h=c223a33f8c418a5a781cc095e5f01990 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_carw_202x158x1366.png?h=f5b01bedb94b3e7a38db66785de31171 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_carw_202x158x1920.png?h=8019efefec4ffd95792bc9d31515a757 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_carw_202x158x2560.png?h=bfb33cbf731a253b17fc45b9ee6f3cab 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/60a6c2b4-7cbd-420a-b989-73c38943009e_carw_202x158x5120.png?h=b6d49a4c2e90a34c9517dcb4abaac0aa 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Colégio São Judas - Wordpress Template</div>
+                        <div class="date">August, 2018</div>
+                        <div class="custom1 preserve-whitespace">Graphic Design, UI/UX, Web Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/posts-schwarzkopf-brasil" data-context="pages" data-identity="id:p64ee023f2a87b75d6dc61986473106aa98e499e11060aee0e0477" data-hover-hint="galleryPageCover" data-hover-hint-id="p64ee023f2a87b75d6dc61986473106aa98e499e11060aee0e0477">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x32.jpg?h=066fa278d72e34739a56e281671c4671"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x1080.jpg?h=733d3755326ba888df7b2d6d99fca123"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x640.jpg?h=900359df8dda8748edeab957db3e6871 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x1080.jpg?h=733d3755326ba888df7b2d6d99fca123 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x1080.jpg?h=733d3755326ba888df7b2d6d99fca123 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x1080.jpg?h=733d3755326ba888df7b2d6d99fca123 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x1080.jpg?h=733d3755326ba888df7b2d6d99fca123 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/dcc7ae9c-2a9c-4a47-aaaf-e47ecf3d480b_rwc_0x265x1080x810x1080.jpg?h=733d3755326ba888df7b2d6d99fca123 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Social media Schwarzkopf BR</div>
+                        <div class="date">April, 2018</div>
+                        <div class="custom1 preserve-whitespace">Social media, Graphic Design, Video editing</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/logo-animation-motion-graphics" data-context="pages" data-identity="id:p60215c5b256dfde0649b53297cc71a5145c101ae1671e7e2d38c0" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5b256dfde0649b53297cc71a5145c101ae1671e7e2d38c0">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_carw_202x158x32.gif?h=88d46c17804966500ce7a560118fd010"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_car_202x158.gif?h=feffba3b48256d3e5df65abc69bd8910"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_carw_202x158x640.gif?h=8fda2e8dc72a47dc222c738bd08c66b9 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_carw_202x158x1280.gif?h=2cfa94e9d0713c294c9800e95fd21719 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_carw_202x158x1366.gif?h=288c860b3f4eff0ed2c1dbe20531afb7 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_carw_202x158x1920.gif?h=1f752a3faf97c695b6200049357cf311 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_carw_202x158x2560.gif?h=0b83fbbcd8793392efc926e2a22b17ae 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/189dadf1-ea15-431e-a98e-0f089ba3ba0b_carw_202x158x5120.gif?h=3035d8a6a19de09fb811e28f96d9845c 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Logo animation - Motion graphics</div>
+                        <div class="date">June, 2018</div>
+                        <div class="custom1 preserve-whitespace">Motion Graphics, Visual Effects, Animation</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/cardapio-mutata" data-context="pages" data-identity="id:p60215c5aab3eea210f82fca6cf20c6e07eec3e2ba86c137feae3b" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5aab3eea210f82fca6cf20c6e07eec3e2ba86c137feae3b">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_carw_202x158x32.png?h=d5ded0f943ef1814799f2c14dd00117e"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_car_202x158.png?h=8181aa35388405353c321566a6d5ae54"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_carw_202x158x640.png?h=286417dbc6189e5cb660476b93bc082b 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_carw_202x158x1280.png?h=5343d00c9c69e665250c4bf560a30e01 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_carw_202x158x1366.png?h=8c5392eedfa989db96629e96fde1b345 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_carw_202x158x1920.png?h=b0e3c50535a99aff53024b594aad923f 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_carw_202x158x2560.png?h=a91665d9968a20befc77a3bf354bdd64 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/205d6313-17c2-465c-8faa-c98745132fa3_carw_202x158x5120.png?h=000883d700ba6989b0299726dae7057c 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Cardápio - Mutata</div>
+                        <div class="date">June, 2018</div>
+                        <div class="custom1 preserve-whitespace">Editorial Design, Graphic Design, Print Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/demo-reel-matheus-gomes" data-context="pages" data-identity="id:p60215c5b8e4e19d62c8fa1b097caaea201bad2943a5cace1b84e0" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5b8e4e19d62c8fa1b097caaea201bad2943a5cace1b84e0">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x32.jpg?h=d42bccd7bc30e1efc5123ace32a2b1bd"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x1199.jpg?h=9e08d6bc9ff2135a2e73349a299de8a0"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x640.jpg?h=40ac329966eb12ade528e20c2019f7cc 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x1199.jpg?h=9e08d6bc9ff2135a2e73349a299de8a0 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x1199.jpg?h=9e08d6bc9ff2135a2e73349a299de8a0 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x1199.jpg?h=9e08d6bc9ff2135a2e73349a299de8a0 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x1199.jpg?h=9e08d6bc9ff2135a2e73349a299de8a0 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/6fc322b1-55f0-4dda-b88b-f1e004b08bbb_rwc_0x0x1199x900x1199.jpg?h=9e08d6bc9ff2135a2e73349a299de8a0 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Demo reel</div>
+                        <div class="date">July, 2018</div>
+                        <div class="custom1 preserve-whitespace">Art Direction, Photography, Video Editing, Visual Effects</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/rebranding-chocolate-surpresa" data-context="pages" data-identity="id:p60215c5c64f6d77e79f3c44419b021fa9f89b8bf2a4b47e4d0e50" data-hover-hint="galleryPageCover" data-hover-hint-id="p60215c5c64f6d77e79f3c44419b021fa9f89b8bf2a4b47e4d0e50">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_carw_202x158x32.png?h=a11b964e68ad0b58926cc0ebe47becba"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_car_202x158.png?h=2dacb405db954cc955e27b2710fe2170"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_carw_202x158x640.png?h=a97d48088c2a2a06bcc74d09556c3533 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_carw_202x158x1280.png?h=6393c3601b295813593a63431eeef5e4 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_carw_202x158x1366.png?h=956b591e035091fe77667cfc27e52e9e 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_carw_202x158x1920.png?h=20694ceac2e2544ac7fcb964c7f12f7e 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_carw_202x158x2560.png?h=8779ee4779da67ad8f7c8ed8dd2ac2bd 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/166e0263-cd79-4253-a234-44e56fd92d3d_carw_202x158x5120.png?h=1565044253f9967a93831a3c21c8ca87 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Rebranding - Chocolate Surpresa</div>
+                        <div class="date">September, 2018</div>
+                        <div class="custom1 preserve-whitespace">Art Direction, Branding, Graphic Design</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="project-cover js-project-cover-touch hold-space" href="/cartoes-de-visita" data-context="pages" data-identity="id:p59974d8bc3f6ed3c3e28c1bfff6bda9d86c505bbb11ea49f0f2aa" data-hover-hint="galleryPageCover" data-hover-hint-id="p59974d8bc3f6ed3c3e28c1bfff6bda9d86c505bbb11ea49f0f2aa">
+              <div class="cover-content-container">
+                <div class="cover-image-wrap">
+                  <div class="cover-image">
+                      <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_carw_202x158x32.jpg?h=4ec2da5fd6232a7d0dc395895955369f"
+              data-src="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_car_202x158.jpg?h=11c1fec89415263f3267973c94de1978"
+              data-srcset="https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_carw_202x158x640.jpg?h=3a626047617c898b19c918fd46423467 640w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_carw_202x158x1280.jpg?h=195cfd17b97a6289bf40a6b5cfe5ee04 1280w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_carw_202x158x1366.jpg?h=3fa6106d2380b15c26d4e4edcb095663 1366w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_carw_202x158x1920.jpg?h=f43328fdc294b06122e220a9f19df83e 1920w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_carw_202x158x2560.jpg?h=d4e2eb0cd90d281c2bffa973dfb643be 2560w, https://cdn.myportfolio.com/c05ff415cfdb02f7b9bbf5447b8ad5ca/8e11ffdd1880924af0cb87c0290ddf91596b7feb47d5a71be118aee49327501ba2294773a9a9eef2_carw_202x158x5120.jpg?h=f5a7312fb8eb0a72682b9377f312a030 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1600px / 4)"
+            >
+                                </div>
+                  </div>
+                </div>
+                <div class="details-wrap">
+                  <div class="details">
+                    <div class="details-inner">
+                        <div class="title preserve-whitespace">Cartões de visita</div>
+                        <div class="date">March, 2016</div>
+                        <div class="custom1 preserve-whitespace">Graphic Design, Print Design, Illustration</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </section>
+              <section class="back-to-top" data-hover-hint="backToTop">
+                <a href="#"><span class="arrow">&uarr;</span><span class="preserve-whitespace">Back to Top</span></a>
+              </section>
+              <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+                <g>
+                  <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+                    c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+                    c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+                    c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+                    c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+                    c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+                    c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"/>
+                </g>
+                </svg>
+              </a>
+              <footer class="site-footer" data-hover-hint="footer">
+                  <div class="social pf-footer-social" data-context="theme.footer" data-hover-hint="footerSocialIcons">
+                    <ul>
+                            <li>
+                              <a href="http://be.net/matgoms" target="_blank">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" class="icon"><path id="path-1" d="M18.83,14.38a2.78,2.78,0,0,0,.65,1.9,2.31,2.31,0,0,0,1.7.59,2.31,2.31,0,0,0,1.38-.41,1.79,1.79,0,0,0,.71-0.87h2.31a4.48,4.48,0,0,1-1.71,2.53,5,5,0,0,1-2.78.76,5.53,5.53,0,0,1-2-.37,4.34,4.34,0,0,1-1.55-1,4.77,4.77,0,0,1-1-1.63,6.29,6.29,0,0,1,0-4.13,4.83,4.83,0,0,1,1-1.64A4.64,4.64,0,0,1,19.09,9a4.86,4.86,0,0,1,2-.4A4.5,4.5,0,0,1,23.21,9a4.36,4.36,0,0,1,1.5,1.3,5.39,5.39,0,0,1,.84,1.86,7,7,0,0,1,.18,2.18h-6.9Zm3.67-3.24A1.94,1.94,0,0,0,21,10.6a2.26,2.26,0,0,0-1,.22,2,2,0,0,0-.66.54,1.94,1.94,0,0,0-.35.69,3.47,3.47,0,0,0-.12.65h4.29A2.75,2.75,0,0,0,22.5,11.14ZM18.29,6h5.36V7.35H18.29V6ZM13.89,17.7a4.4,4.4,0,0,1-1.51.7,6.44,6.44,0,0,1-1.73.22H4.24V5.12h6.24a7.7,7.7,0,0,1,1.73.17,3.67,3.67,0,0,1,1.33.56,2.6,2.6,0,0,1,.86,1,3.74,3.74,0,0,1,.3,1.58,3,3,0,0,1-.46,1.7,3.33,3.33,0,0,1-1.35,1.12,3.19,3.19,0,0,1,1.82,1.26,3.79,3.79,0,0,1,.59,2.17,3.79,3.79,0,0,1-.39,1.77A3.24,3.24,0,0,1,13.89,17.7ZM11.72,8.19a1.25,1.25,0,0,0-.45-0.47,1.88,1.88,0,0,0-.64-0.24,5.5,5.5,0,0,0-.76-0.05H7.16v3.16h3a2,2,0,0,0,1.28-.38A1.43,1.43,0,0,0,11.89,9,1.73,1.73,0,0,0,11.72,8.19ZM11.84,13a2.39,2.39,0,0,0-1.52-.45H7.16v3.73h3.11a3.61,3.61,0,0,0,.82-0.09A2,2,0,0,0,11.77,16a1.39,1.39,0,0,0,.47-0.54,1.85,1.85,0,0,0,.17-0.88A1.77,1.77,0,0,0,11.84,13Z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.linkedin.com/in/matgoms/" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
+                                  c0,0,0.1-9.8,0-10.8H16v1.5c0,0,0,0,0,0h0v0C16.4,9,17.2,7.9,19,7.9c2.3,0,4,1.5,4,4.9V19H19.6z M8.9,6.7L8.9,6.7
+                                  C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z"/>
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="http://instagram.com/matgoms" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <g>
+                                  <path d="M15,5.4c2.1,0,2.4,0,3.2,0c0.8,0,1.2,0.2,1.5,0.3c0.4,0.1,0.6,0.3,0.9,0.6c0.3,0.3,0.5,0.5,0.6,0.9
+                                    c0.1,0.3,0.2,0.7,0.3,1.5c0,0.8,0,1.1,0,3.2s0,2.4,0,3.2c0,0.8-0.2,1.2-0.3,1.5c-0.1,0.4-0.3,0.6-0.6,0.9c-0.3,0.3-0.5,0.5-0.9,0.6
+                                    c-0.3,0.1-0.7,0.2-1.5,0.3c-0.8,0-1.1,0-3.2,0s-2.4,0-3.2,0c-0.8,0-1.2-0.2-1.5-0.3c-0.4-0.1-0.6-0.3-0.9-0.6
+                                    c-0.3-0.3-0.5-0.5-0.6-0.9c-0.1-0.3-0.2-0.7-0.3-1.5c0-0.8,0-1.1,0-3.2s0-2.4,0-3.2c0-0.8,0.2-1.2,0.3-1.5c0.1-0.4,0.3-0.6,0.6-0.9
+                                    c0.3-0.3,0.5-0.5,0.9-0.6c0.3-0.1,0.7-0.2,1.5-0.3C12.6,5.4,12.9,5.4,15,5.4 M15,4c-2.2,0-2.4,0-3.3,0c-0.9,0-1.4,0.2-1.9,0.4
+                                    c-0.5,0.2-1,0.5-1.4,0.9C7.9,5.8,7.6,6.2,7.4,6.8C7.2,7.3,7.1,7.9,7,8.7C7,9.6,7,9.8,7,12s0,2.4,0,3.3c0,0.9,0.2,1.4,0.4,1.9
+                                    c0.2,0.5,0.5,1,0.9,1.4c0.4,0.4,0.9,0.7,1.4,0.9c0.5,0.2,1.1,0.3,1.9,0.4c0.9,0,1.1,0,3.3,0s2.4,0,3.3,0c0.9,0,1.4-0.2,1.9-0.4
+                                    c0.5-0.2,1-0.5,1.4-0.9c0.4-0.4,0.7-0.9,0.9-1.4c0.2-0.5,0.3-1.1,0.4-1.9c0-0.9,0-1.1,0-3.3s0-2.4,0-3.3c0-0.9-0.2-1.4-0.4-1.9
+                                    c-0.2-0.5-0.5-1-0.9-1.4c-0.4-0.4-0.9-0.7-1.4-0.9c-0.5-0.2-1.1-0.3-1.9-0.4C17.4,4,17.2,4,15,4L15,4L15,4z"/>
+                                  <path d="M15,7.9c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S17.3,7.9,15,7.9L15,7.9z M15,14.7c-1.5,0-2.7-1.2-2.7-2.7
+                                    c0-1.5,1.2-2.7,2.7-2.7s2.7,1.2,2.7,2.7C17.7,13.5,16.5,14.7,15,14.7L15,14.7z"/>
+                                  <path d="M20.2,7.7c0,0.5-0.4,1-1,1s-1-0.4-1-1s0.4-1,1-1S20.2,7.2,20.2,7.7L20.2,7.7z"/>
+                                </g>
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://dribbble.com/matgoms" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 30 24" xml:space="preserve" class="icon"><path d="M15 20c-4.41 0-8-3.59-8-8s3.59-8 8-8c4.41 0 8 3.6 8 8S19.41 20 15 20L15 20z M21.75 13.1 c-0.23-0.07-2.12-0.64-4.26-0.29c0.89 2.5 1.3 4.5 1.3 4.87C20.35 16.6 21.4 15 21.8 13.1L21.75 13.1z M17.67 18.3 c-0.1-0.6-0.5-2.69-1.46-5.18c-0.02 0-0.03 0.01-0.05 0.01c-3.85 1.34-5.24 4.02-5.36 4.27c1.16 0.9 2.6 1.4 4.2 1.4 C15.95 18.8 16.9 18.6 17.7 18.3L17.67 18.3z M9.92 16.58c0.15-0.27 2.03-3.37 5.55-4.51c0.09-0.03 0.18-0.06 0.27-0.08 c-0.17-0.39-0.36-0.78-0.55-1.16c-3.41 1.02-6.72 0.98-7.02 0.97c0 0.1 0 0.1 0 0.21C8.17 13.8 8.8 15.4 9.9 16.58L9.92 16.6 z M8.31 10.61c0.31 0 3.1 0 6.32-0.83c-1.13-2.01-2.35-3.7-2.53-3.95C10.18 6.7 8.8 8.5 8.3 10.61L8.31 10.61z M13.4 5.4 c0.19 0.2 1.4 1.9 2.5 4c2.43-0.91 3.46-2.29 3.58-2.47C18.32 5.8 16.7 5.2 15 5.18C14.45 5.2 13.9 5.2 13.4 5.4 L13.4 5.37z M20.29 7.69c-0.14 0.19-1.29 1.66-3.82 2.69c0.16 0.3 0.3 0.7 0.5 0.99c0.05 0.1 0.1 0.2 0.1 0.3 c2.27-0.29 4.5 0.2 4.8 0.22C21.82 10.3 21.2 8.8 20.3 7.69L20.29 7.69z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="mailto:matgoms@gmail.com">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                  <g>
+                                    <path d="M15,13L7.1,7.1c0-0.5,0.4-1,1-1h13.8c0.5,0,1,0.4,1,1L15,13z M15,14.8l7.9-5.9v8.1c0,0.5-0.4,1-1,1H8.1c-0.5,0-1-0.4-1-1 V8.8L15,14.8z"/>
+                                  </g>
+                                </svg>
+                              </a>
+                            </li>
+                    </ul>
+                  </div>
+                <div class="footer-text">
+                  Dont hesitate to contact me at <b><a href="mailto:matgoms@gmail.com">matgoms@gmail.com</a></b> if you have any questions. Thank you!
+                </div>
+              </footer>
+        </main>
+      </div>
     </div>
-    <div class="question">{Question}</div>
-</div>
-{block:Answerer}
-    <li class="caption rbcap">
-        <div class="user-wrap">
-            <img src="{AnswererPortraitURL-64}" class="capicon icon">
-            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}">{Answerer}</div>
-        </div>
-        <div class="captext">{Answer}</div>
-    </li>
-{/block:Answerer}
-{block:NotReblog}
-    <li class="caption ogcap captop">
-        <div class="captext">{Replies}</div>
-    </li>
-{/block:NotReblog}
-{block:RebloggedFrom}{block:Reblogs}
-    <li class="caption captop rbcap">
-            <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-            <div class="captext">{Body}</div>
-        </li>
-{/block:Reblogs}{/block:RebloggedFrom}
-{/block:Answer}
-
-{block:Audio}
-<div class="audiopost" style="background: url({block:AlbumArt}{AlbumArtURL}{/block:AlbumArt}); background-position: center; background-size: cover;">
-    <div class="audio-wrap">
-        <div class="audio-content">
-            {block:AlbumArt}
-                <img src="{AlbumArtURL}" class="albumart">
-            {/block:AlbumArt}
-            <div class="audioinfo">
-                {block:TrackName}<div class="subtitle">{TrackName}</div>{/block:TrackName}
-                {block:Artist}{Artist}{/block:Artist}
-                {block:Album}<br>{Album}{/block:Album}
-            </div>
-        </div>
-     
-        <div class="audio-button-wrap">
-            <svg xmlns="https://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="48px" viewBox="0 0 24 24" width="48px" fill="none"><g><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/></g><g><g/><path d="M12,5V1L7,6l5,5V7c3.31,0,6,2.69,6,6s-2.69,6-6,6s-6-2.69-6-6H4c0,4.42,3.58,8,8,8s8-3.58,8-8S16.42,5,12,5z"/></g></svg>
-            <svg xmlns="https://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 6h2v12H6zm3.5 6l8.5 6V6l-8.5 6zm6.5 2.14L12.97 12 16 9.86v4.28z"/></svg>
-            <div class="audiobox"><div class="button">
-                {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
-            </div></div>
-            <svg xmlns="https://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg>
-            <svg xmlns="https://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
-        </div>
-    </div>
-</div>
-{block:Caption}
-    {block:NotReblog}
-        <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="captext">{Caption}</div>
-        </li>
-    {/block:NotReblog}
-    {block:Reblogs}
-        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="user-wrap">
-                <img src="{PortraitURL-64}" class="capicon icon">
-                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            </div>
-            <div class="captext">{Body}</div>
-        </li>
-    {/block:Reblogs}
-{/block:Caption}
-{/block:Audio}
-
-<!----- INFO ----->
-
-{block:Date}
-<div class="info infobg upper align-flex">
-    <div class="info-left">
-        {block:IndexPage}
-        <span class="type"><a href="{Permalink}" class="subtitle" title="{TimeAgo}">{ShortMonth} {DayOfMonth}</a></span>
-            {block:NoteCount}<a href="{Permalink}" class="notecount">{NoteCountWithLabel}</a>{/block:NoteCount}
-        {/block:IndexPage}
-        {block:PermalinkPage}
-            <li>{TimeAgo} on {Month} {DayOfMonth}, {Year}</li>
-            {block:RebloggedFrom}
-                <li>{lang:Reblogged from} <a href="{ReblogParentURL}">{ReblogParentName}</a></li>
-                <li>{lang:Originally from ReblogRootName 2}</li>
-            {/block:RebloggedFrom}
-            {block:ContentSource}<li>{lang:Source}: <a href="{SourceURL}">{SourceTitle}</a></li>{/block:ContentSource}
-        {/block:PermalinkPage}
-    </div>
-    
-    <div class="info-controls">
-        {block:HasTags}{block:ifTagsOnClick}{block:IndexPage}<a class="tag-button" title="show tags"><svg xmlns="https://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><g><path d="M21.41,11.41l-8.83-8.83C12.21,2.21,11.7,2,11.17,2H4C2.9,2,2,2.9,2,4v7.17c0,0.53,0.21,1.04,0.59,1.41l8.83,8.83 c0.78,0.78,2.05,0.78,2.83,0l7.17-7.17C22.2,13.46,22.2,12.2,21.41,11.41z M12.83,20L4,11.17V4h7.17L20,12.83L12.83,20z"/><circle cx="6.5" cy="6.5" r="1.5"/></g></g></svg></a>{/block:IndexPage}{/block:ifTagsOnClick}{/block:HasTags}
-        <a href="{ReblogURL}" title="reblog" target="_blank" class="reblog-button"><svg xmlns="https://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M7 7h10v1.79c0 .45.54.67.85.35l2.79-2.79c.2-.2.2-.51 0-.71l-2.79-2.79c-.31-.31-.85-.09-.85.36V5H6c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1V7zm10 10H7v-1.79c0-.45-.54-.67-.85-.35l-2.79 2.79c-.2.2-.2.51 0 .71l2.79 2.79c.31.31.85.09.85-.36V19h11c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v3z"/></svg></a>
-        <a class="like-wrap" title="like">{LikeButton}<span class="new-button"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></span></a>
-    </div>
-</div>
-{/block:Date}
-
-</div>
-
-<!----- TAGS ----->
-
-{block:HasTags}
-    <div class="tags upper">{block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}</div>
-{/block:HasTags}
-
-</article>
-
-<!----- POST NOTES ----->
-
-{block:PermalinkPage}{block:Date}
-{block:NoteCount}{block:PostNotes}
-<div class="post-notes posts">
-    <div class="navbg">
-        <div class="title" id="notetitle">{NoteCountWithLabel}</div>
-    </div>
-    {PostNotes-64}
-</div>
-{/block:PostNotes}{/block:NoteCount}
-{/block:Date}{/block:PermalinkPage}
-
-{/block:Posts}
-
-<!----- PAGINATION ----->
-
-{block:Pagination}
-<article class="pg posts upper align-flex">
-    <span>
-        {block:PreviousPage}
-            <a href="{PreviousPage}">backwards</a>
-            /
-        {/block:PreviousPage}
-        {block:NextPage}
-            <a href="{NextPage}">forwards</a>
-        {/block:NextPage}
-    </span>
-    
-    <div id="currentpg" class="subtitle">
-        {CurrentPage} of {TotalPages}
-    </div>
-</article>
-{/block:Pagination}
-    
-</section>
-
-</main>
-
-<a href="https://seyche.tumblr.com" title="zinnia theme by seyche" id="k">&.</a>
- 
-<a href="https://seyche.tumblr.com" id="m" class="upper">zinnia theme by seyche</a>
-
-<!----- PHOTOSETS ----->
-
-<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-
-<!----- TOOLTIPS ----->
-
-<script src="https://unpkg.com/popper.js@1"></script>
-<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
-
-<!----- VIDEO RESIZING ----->
-
-<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
-
-<!----- JQUERY ----->
- 
-<script>
-
-$(document).ready(function(){
-    
-    /// PHOTOSET
-    
-    $('.photo-slideshow').pxuPhotoset({
-       lightbox: true,
-       rounded: false,
-       gutter: '{select:photoset gutter}px',
-       borderRadius: '0px',
-       photoset: '.photo-slideshow',
-       photoWrap: '.photo-data',
-       photo: '.pxu-photo'
-   });
-   
-   npfPhotosets(".posts", {
-       rowClass:"npf_row",
-       imageContainerClass:"tmblr-full",
-       generatedPhotosetContainerClass:"npf_photoset",
-       imageClass:"npf_image",
-       includeCommonPhotosets: false,
-       useTumblrLightbox: true,
-       insertGalleryIndicator: false,
-       galleryIndicatorClass: "npf_gallery_indicator",
-       galleryIndicatorContent: "<img src='image_url'>",
-       photosetMargins:"{select:photoset gutter}"
-    });
-
-    /// NOTECOUNT 
-
-    $('article').find('.notecount').each(function(){
-       var n = $(this).html().split(' ')[0].replace(/,/g, '');
-       if (n > 999) {
-           n = Math.floor(n / 100) / 10;
-           $(this).text(n + 'k notes');
-       }
-   });
-
-    /// TAGS ON CLICK
-    
-    {block:ifTagsOnClick}{block:IndexPage}
-    $('.tags').hide();
-    $('.tag-button').click(function() {
-        $(this).closest('article').find('.tags').slideToggle(500);
-        $(this).toggleClass('tag-clicked');
-        return false;
-    });
-    {/block:IndexPage}{/block:ifTagsOnClick}
-    
-    /// UPDATES TAB
-    
-    {block:ifUpdatesTab}
-    $('#updates-tab').hide();
-    $('.updates-button').click(function() {
-        $('#updates-tab').slideToggle(500);
-        $(this).toggleClass('updates-clicked');
-        return false;
-    });
-    {/block:ifUpdatesTab}
-    
-    /// TOOLTIPS
-
-    tippy('[title]', {
-        theme: 'custom',
-        arrow: false,
-        followCursor: true,
-        delay: 100,
-        placement: 'bottom-start',
-        zIndex: 9999999999,
-        maxWidth: 400,
-    
-        content(reference) {
-          const title = reference.getAttribute('title');
-          reference.removeAttribute('title');
-          return title;
-        },
-    });
-    
-});
-
-/// RESPONSIVE VIDEOS
-
-    function flexFrame() {
-   $(".caption").each(function() {
-        $(this).find("iframe").wrap("<div class='capframe'></div>"); 
-        flexibleFrames($(".capframe"));
-    });
-    flexibleFrames($(".video"));
-}
-$(document).ready(flexFrame);
-
-feather.replace()
-
-</script> 
-
-
-</body>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":25,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p59974d8627638a32df7959f85082d1bbb5d448a75981a36a8191e","theme":{"name":"geometric"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#191D21"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"G-RHDB6EHHSC","anonymization":false}};</script>
+  <script type="text/javascript" src="/site/translations?cb=00c4fc5cd7efacc26a8ef9a0440c1778e455b700"></script>
+  <script type="text/javascript" src="/dist/js/main.js?cb=00c4fc5cd7efacc26a8ef9a0440c1778e455b700"></script>
 </html>
