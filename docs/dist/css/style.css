@@ -48,7 +48,7 @@ p {
     margin-top: 24px;
 }
 
-.button {
+.btn-primary {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     border-radius: 6.25rem;
@@ -66,6 +66,29 @@ p {
     overflow: hidden;
     position: relative;
     border: 0px;
+    width: fit-content;
+}
+
+.btn-secondary {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-radius: 6.25rem;
+    background: rgb(148, 148, 148);
+    color: rgb(22, 22, 22);
+    height: 3rem;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    outline: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    border: 0px;
+    z-index: 1100;
+    width: fit-content;
 }
 div.tippy-box {
     background: none;
@@ -259,7 +282,6 @@ div.tippy-box {
 
 
 .side {
-    transform: rotate(-90deg);
     margin-top: 16px;
 }
 
@@ -274,17 +296,10 @@ div.tippy-box {
 .contact-side {
     position: fixed;
     right: 85px;
-    top: 45%;
-    width: 24px;
+    bottom: 15%;
 }
 
-.contact-side div {
-    height: 40px;
-    width: 1px;
-    background-color: #ffffff;
-    margin-top: 21px;
-    margin-left: 30px;
-}
+
 
 .social {
     position: fixed;
@@ -338,7 +353,7 @@ div.tippy-box {
 .assessoria {
     padding-top: 80px;
     padding-bottom: 100px;
-    background: url('/web/20220311151231im_/https://matgoms.me/img/curva.svg');
+    background: url('https://matgoms.me/img/curva.svg');
     background-position: 200% top;
     background-size: 80%;
     background-repeat: no-repeat;
@@ -458,6 +473,15 @@ div.tippy-box {
     display: flex;
 }
 
+.about-me img{
+    margin-top: 24px;
+    transition: opacity 0.2s linear, -webkit-transform 0.2s ease-out, -webkit-filter 0.2s linear;
+    filter: saturate(0);
+}
+.about-me img:hover{
+    transition: opacity 0.2s linear, -webkit-transform 0.2s ease-out, -webkit-filter 0.2s linear;
+    filter: saturate(1);
+}
 .contact {
     margin-top: 420px;
 }
