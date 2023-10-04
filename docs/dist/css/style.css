@@ -295,8 +295,9 @@ div.tippy-box {
 
 .contact-side {
     position: fixed;
-    right: 85px;
-    bottom: 15%;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
 }
 
 
