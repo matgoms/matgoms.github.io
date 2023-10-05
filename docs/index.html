@@ -1,14 +1,26 @@
 <!DOCTYPE html>   
 
 <head>
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/tippy.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js"></script>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script> 
+
+<script type="module">
+  import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery--getting-started',
+    children: 'a',
+    pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.esm.js')
+  });
+  lightbox.init();
+</script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
 
 <link rel="stylesheet" href="dist/css/style.css">
 
@@ -20,6 +32,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RHDB6EHHSC"></script>
 <script>
+  
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -29,26 +42,13 @@ gtag('config', 'G-RHDB6EHHSC');
 <!-- Include the mediumZoom library -->
 
 
-
-<script>
-// Your other JavaScript code here
-$(document).ready(function(){
-    // ...
-    mediumZoom('[data-zoomable]', {
-        background: '#000000',   
-    })
-    // Your other JavaScript code here
-});
-</script>
-
         <title>Matheus Gomes</title>
         <link rel="shortcut icon" type="image/png" href="https://matgoms.me/">
 </head>
     
+ <body class="bg-dark">
+
  
-
-
-
 
 <div class="container-fluid header">
 <div id="menu">
@@ -85,32 +85,106 @@ $(document).ready(function(){
 <div class="hello d-flex">
 
   <div class="col-md-10 col-sm-12">
-    <h5>NICE TO SEE YOU</h5>
-    <h1 class="mb-5">Welcome to my portfolio! <br> I'm a 26-years-old photographer, adventurer, art enthusiast and designer. Hope you enjoy it.</h1>
-    <a class="btn-primary" href="#works">Let's go!<ion-icon name="arrow-down-outline"></ion-icon></a>  
+    <h5>Welcome to my portfolio! </h5>
+    <h1 class="mb-5">I'm a 26-years-old photographer, adventurer, art enthusiast and designer. Hope you enjoy it.</h1>
+    <a class="btn btn-primary" href="#works">Let's go!<ion-icon name="arrow-down-outline"></ion-icon></a>  
   </div>
 </div>
 </div>
 <div class="container works" id="works">
 <div class="col-md-12">
-  <h1 class="mb-5">Photography works<p>This is an album filled with heartwarming travel memories, incredible landscapes i've encountered, pre-wedding shoot and portraits.</p></h1>
+  <h2>Photography works</h2>
+  <p>This is an album filled with heartwarming travel memories, incredible landscapes i've encountered, pre-wedding shoot and portraits.</p>
   
 </div>
-<div class="row g-4" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 825px;">
-  <div class="col-md-3" style="position: absolute; left: 0%; top: 0px;"><img src="https://dm2301files.storage.live.com/y4mVvJRwr_3T0YZ6rknuYu7R9baXrEwW5vhaMeAkCx8SFezK2r1UnSGdB19sDtUwzFcR46jAuNYhBg2s9TYtaCEjhcratkU0hWMlETypwbyhlXQRmTXg4bRe1COPTLerfDIyRipmaX0VqWHHTM6gEV-oD_4N-zrLZlz07-sJd3MHiATywAftkXkjKVqBwICuPBx?width=860&amp;height=667&amp;cropmode=none" alt="y4mVvJRwr_3T0YZ6rknuYu7R9baXrEwW5vhaMeAkCx8SFezK2r1UnSGdB19sDtUwzFcR46jAuNYhBg2s9TYtaCEjhcratkU0hWMlETypwbyhlXQRmTXg4bRe1COPTLerfDIyRipmaX0VqWHHTM6gEV-oD_4N-zrLZlz07-sJd3MHiATywAftkXkjKVqBwICuPBx" data-zoomable="" class="medium-zoom-image"></div>
-  <div class="col-md-6" style="position: absolute; left: 25%; top: 0px;"><img src="https://dm2301files.storage.live.com/y4m5K6gs6sxasQRc0Gt1At2m8mrg9SXQzduFFUhoAXctBU7sQoPHneszwe5P0KwGAudt2SGejo4TjXoS-AMJIsBq2mrhtNFHq0F_oAbXHOHLHxE4NI1R01QqTL9QxQd6Ge7RgLJv19LtqdnVMDPYT1THKtPqINEzSkgVb1svh4l4UgAVvCtob9B6ZqRPltzgNyF?width=808&amp;height=667&amp;cropmode=none" alt="y4m5K6gs6sxasQRc0Gt1At2m8mrg9SXQzduFFUhoAXctBU7sQoPHneszwe5P0KwGAudt2SGejo4TjXoS-AMJIsBq2mrhtNFHq0F_oAbXHOHLHxE4NI1R01QqTL9QxQd6Ge7RgLJv19LtqdnVMDPYT1THKtPqINEzSkgVb1svh4l4UgAVvCtob9B6ZqRPltzgNyF" data-zoomable="" class="medium-zoom-image"></div>
-  <div class="col-md-3" style="position: absolute; left: 75%; top: 0px;"><img src="https://dm2301files.storage.live.com/y4mMcFfcqtytMmmsxjCY1sT7XjQYw-d3IwBC89o1iMvA6d5tfRJH6DOOQOXwBoaCoVcTiduiCACKEhTLTsW7n2yQf5qnYRqLxky0aAVlD7Xz7C2zElDdHXihfuCdos7fM7uf97HeqgvZjfsnjJX3D_mpP_JuvRhwPKyE_i9Ol44Pee_P6dXW3mwTWwUkoKX-shl?width=530&amp;height=667&amp;cropmode=none" alt="y4mMcFfcqtytMmmsxjCY1sT7XjQYw-d3IwBC89o1iMvA6d5tfRJH6DOOQOXwBoaCoVcTiduiCACKEhTLTsW7n2yQf5qnYRqLxky0aAVlD7Xz7C2zElDdHXihfuCdos7fM7uf97HeqgvZjfsnjJX3D_mpP_JuvRhwPKyE_i9Ol44Pee_P6dXW3mwTWwUkoKX-shl" data-zoomable="" class="medium-zoom-image"></div>
-  <div class="col-md-3" style="position: absolute; left: 0%; top: 275px;"><img src="https://dm2301files.storage.live.com/y4m8KfWEt6JmDrMDrYqH8y6n93lrpKSGN8z-EUoeBwgqyAsiwzYnSYzQ62g5QFtAnU6HnQRr3Bn86X8nsi36FaHdZp5UiRmeXJfPkMyQEgMPaOZ1ndncLrvr_r6_6QRBP8RV-AFz_y1DDvqa61sVuGh0YzhbGdh_ZxnTRvzKWY7haE92KkFVZH7cutNomQJw2Ox?width=651&amp;height=667&amp;cropmode=none" alt="y4m8KfWEt6JmDrMDrYqH8y6n93lrpKSGN8z-EUoeBwgqyAsiwzYnSYzQ62g5QFtAnU6HnQRr3Bn86X8nsi36FaHdZp5UiRmeXJfPkMyQEgMPaOZ1ndncLrvr_r6_6QRBP8RV-AFz_y1DDvqa61sVuGh0YzhbGdh_ZxnTRvzKWY7haE92KkFVZH7cutNomQJw2Ox" data-zoomable="" class="medium-zoom-image"></div>
-  <div class="col-md-3" style="position: absolute; left: 25%; top: 550px;"><img src="https://dm2301files.storage.live.com/y4mhA038FzZfPQEoyfg6czqFQDOHwpSgw1f4dRjbC9lvHNVKcHO707Yq-BvQe68-fO5-X4yYWCDtANrvEppr8olDrQ9L8msjB9plb6zWeSd1Hjq9Whst-8JjRnQ0v126a1WtmbZY7wppXKruodkYIa3zwWA8ZB-H25EHUWM1I3THvx-X8QucoXUGedP4yEn0zXj?width=1000&amp;height=667&amp;cropmode=none" alt="y4mhA038FzZfPQEoyfg6czqFQDOHwpSgw1f4dRjbC9lvHNVKcHO707Yq-BvQe68-fO5-X4yYWCDtANrvEppr8olDrQ9L8msjB9plb6zWeSd1Hjq9Whst-8JjRnQ0v126a1WtmbZY7wppXKruodkYIa3zwWA8ZB-H25EHUWM1I3THvx-X8QucoXUGedP4yEn0zXj" data-zoomable="" class="medium-zoom-image"></div>
-  <div class="col-md-6" style="position: absolute; left: 50%; top: 550px;"><img src="https://dm2301files.storage.live.com/y4m8X4X1lhNkMcdGmy70byqB7IP_1-KQUqRKPH9NoNx0ben1uokZTgffqE1pLVliqEkdaqxxLA3Zj-Mw6CffCQj3TRsbmE-wVUPZfmj_t6L8o-bbOw-RdBsN45bbPal1w5d-ArjVX_hGMATsSV5fb1nBIlCNUE8VXnMBASOsxSFU0VFE6_HA_ET6uDMjIZ76v4R?width=1000&amp;height=667&amp;cropmode=none" alt="y4m8X4X1lhNkMcdGmy70byqB7IP_1-KQUqRKPH9NoNx0ben1uokZTgffqE1pLVliqEkdaqxxLA3Zj-Mw6CffCQj3TRsbmE-wVUPZfmj_t6L8o-bbOw-RdBsN45bbPal1w5d-ArjVX_hGMATsSV5fb1nBIlCNUE8VXnMBASOsxSFU0VFE6_HA_ET6uDMjIZ76v4R" data-zoomable="" class="medium-zoom-image"></div>
-</div><a href="http://be.net/matgoms" target="_blank">
-<h3 class="text-end mt-4">EXPLORE ALL PHOTOS <img src="https://dm2301files.storage.live.com/y4mP0bN63jd99V7YsqaUcsDr94ldwAmVZH67lx2lNadrfxFWrdYsgFyKSqjj_SwRFgzzLfzGN8zgJVWlxERljaoEVeAygTb_wRM1qRfZ8zWodNnMgYEFLTKwc1JfDjRXEKY-tJJ8AMec8pAg4ZrE3BzWE84N8r-s3RDKpbIDPyuDfjUujwqSPLIgFL3kfUIaASA?width=24&amp;height=24&amp;cropmode=none" alt="y4mP0bN63jd99V7YsqaUcsDr94ldwAmVZH67lx2lNadrfxFWrdYsgFyKSqjj_SwRFgzzLfzGN8zgJVWlxERljaoEVeAygTb_wRM1qRfZ8zWodNnMgYEFLTKwc1JfDjRXEKY-tJJ8AMec8pAg4ZrE3BzWE84N8r-s3RDKpbIDPyuDfjUujwqSPLIgFL3kfUIaASA" style="margin-top: -3px;"></h3></a>
+
+        <div class="pswp-gallery pswp-gallery--single-column" data-masonry="{&quot;percentPosition&quot;: true, &quot;gutter&quot;:8}" id="gallery--getting-started">
+          <a href="dist/img/photos/1.jpg"
+            data-pswp-width="1280" 
+            data-pswp-height="1920" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/1.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/2.jpg"
+            data-pswp-width="1000" 
+            data-pswp-height="667" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/2.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/3.jpg" 
+          data-pswp-width="1280" 
+          data-pswp-height="1920" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/3.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/4.jpg"
+            data-pswp-width="1000" 
+            data-pswp-height="1500" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/4.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/5.jpg"
+            data-pswp-width="1920" 
+          data-pswp-height="1280" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/5.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/6.jpg"
+            data-pswp-width="1000" 
+            data-pswp-height="1500" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/6.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/4.jpg"
+            data-pswp-width="1000" 
+            data-pswp-height="1500" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/4.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/5.jpg"
+            data-pswp-width="1920" 
+          data-pswp-height="1280" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/5.jpg" alt=""/>
+          </a>
+          <a href="dist/img/photos/6.jpg"
+            data-pswp-width="1000" 
+            data-pswp-height="1500" 
+            data-cropped="true" 
+            target="_blank">
+            <img src="dist/img/photos/6.jpg" alt=""/>
+          </a>
+        </div>
+        </div>
+        
+   
+    </div>
+
+  
+
+</div>
+  
+</div>
+
+  <div>
+    <a href="http://be.net/matgoms" target="_blank" class="btn btn-dark float-end mt-4">
+      Explore all photos <ion-icon name="arrow-forward-outline"></ion-icon></h3></a>
+  </div>
+
 </div>
 <div class="container-fluid" style="overflow: hidden;">
 
 <div class="container photos" id="photos">
 <div class="col-md-9">
-  <h1 class="mb-5">Design projects</h1>
+  <h2 class="mb-5">Design projects</h2>
 </div>
 
 <div class="col-md-12 ">
@@ -118,19 +192,19 @@ $(document).ready(function(){
     <div class="owl-carousel carousel-two d-flex owl-loaded owl-drag">
       <div class="owl-stage-outer">
         <div class="owl-stage" style="transform: translate3d(-3203px, 0px, 0px); transition: all 0.25s ease 0s; width: 5950px;">
-          <div class="owl-item" style="width: 427.667px; margin-right: 30px;">
+          <div class="owl-item" style="">
             <div class="col-md-12"><img src="dist/img/design1.jpg" ></div>
           </div>
-          <div class="owl-item" style="width: 427.667px; margin-right: 30px;">
+          <div class="owl-item" style="height: 400px;">
             <div class="col-md-12"><img src="dist/img/design2.png" alt="" ></div>
           </div>
-          <div class="owl-item" style="width: 427.667px; margin-right: 30px;">
+          <div class="owl-item" style="">
             <div class="col-md-12"><img src="dist/img/design3.jpg" alt="" ></div>
           </div>
-          <div class="owl-item" style="width: 427.667px; margin-right: 30px;">
+          <div class="owl-item" style="">
             <div class="col-md-12"><img src="dist/img/design4.jpg" alt="" ></div>
           </div>
-          <div class="owl-item active" style="width: 427.667px; margin-right: 30px;">
+          <div class="owl-item active" style="">
             <div class="col-md-12"><img src="dist/img/design5.jpg" alt="" ></div>
           </div>
           
@@ -153,13 +227,16 @@ $(document).ready(function(){
     <div class="d-flex justify-content-between">
       <div class="col-md-7">
         <h5 class="side">ABOUT ME</h5>
-        <h1 class="mb-5">5+ years experience with projects for top-tier and small companies.</h1>
-        <p>24yd,<br>
+        <h2>Over 7 years of work experience with leading companies and small businesses.</h2>
+        <p>As a creative enthusiast, I have always been dedicated to studying various artistic fields and visual communications. I have a strong ability to adapt, allowing me to tackle various situations effectively and find prompt, suitable solutions. Furthermore, through my professional experiences and studies at exceptional universities, I have learned to manage multiple tasks simultaneously and consistently excel by delivering high-quality work.
+        </p>
+
+        <p>26yd,<br>
         São Paulo, Brazil</p>
         <p>matgoms@gmail.com<br>
         +55 11 97623 3032</p>
       </div>
-      <div class="col-md-3 d-none d-md-block d-lg-block d-xl-block"><img src="dist/img/me.jpg" alt="" class="img"></div>
+      <div class="col-md-3 d-none d-md-block d-lg-block d-xl-block"><img src="dist/img/me.jpg" alt=""></div>
     </div>
     <div class="about-item">
       <h3>Education</h3>
@@ -238,19 +315,20 @@ $(document).ready(function(){
 </div>
 <div class="container">
 <div class="contact d-flex" id="contact">
-  <div class="col-md-1">
-    <h5 class="side">HIRE ME.</h5>
-  </div>
   <div class="col-md-6">
-    <h1 class="mb-5">Don't hesitate to contact me at <a href="mailto:matgoms@gmail.com" class="txt-active d-inline-block">matgoms@gmail.com</a></h1>
+    <h2 class="mb-5">Don't hesitate to contact me at <a href="mailto:matgoms@gmail.com" class="d-inline-block">matgoms@gmail.com</a></h2>
   </div>
 </div>
 <div class="footer">
-  <h5 class="credits">site made by myself, with love. <img src="https://dm2301files.storage.live.com/y4mvIAbGjfOzLc9CUHJF8sfn2ud_o3-KWyj2-uingjb9b-nx6ZWnouzvdTHgtF-kJd0wLWEVwBWBnPcve9cCghuBQhxhBSXVmX0hBwmMa0CrCDqNuN3DTzHOzccrPDufJWraHV9VZqKUcFFtX0LCvsWRJMRz8D3eO1FMIPwLoXT12lgMtnjKc9eC_-LN7gJv9-P?width=20&amp;height=17&amp;cropmode=none" alt="y4mvIAbGjfOzLc9CUHJF8sfn2ud_o3-KWyj2-uingjb9b-nx6ZWnouzvdTHgtF-kJd0wLWEVwBWBnPcve9cCghuBQhxhBSXVmX0hBwmMa0CrCDqNuN3DTzHOzccrPDufJWraHV9VZqKUcFFtX0LCvsWRJMRz8D3eO1FMIPwLoXT12lgMtnjKc9eC_-LN7gJv9-P" style="margin-top: -3px;"></h5>
+  <h5 class="credits">site made by myself, with love. <ion-icon name="heart-outline" class="m-0"></ion-icon></h5>
 </div>
 </div>
 <div class="social">
-<a href="http://be.net/matgoms" target="_blank"><img src="https://dm2301files.storage.live.com/y4mw0WFaa8cUBlEypG-Kl-ZIJWUv9dSecLO_ixepzr6Zcx2_tgia8Pwpo3KIANISogbQwrIWu-aoe7-i5MEtwcUjxaZOKUbewRI1roENybtneX-DK0uiT6loxyXwknYjRa5l0RApd8zshRBPiJEfqfR6PaqB1pr-B-_CGH0p5mq9YyZ2aylbihvWXBNihW42C6B?width=24&amp;height=24&amp;cropmode=none" alt="y4mw0WFaa8cUBlEypG-Kl-ZIJWUv9dSecLO_ixepzr6Zcx2_tgia8Pwpo3KIANISogbQwrIWu-aoe7-i5MEtwcUjxaZOKUbewRI1roENybtneX-DK0uiT6loxyXwknYjRa5l0RApd8zshRBPiJEfqfR6PaqB1pr-B-_CGH0p5mq9YyZ2aylbihvWXBNihW42C6B" class="mt-4"></a> <a href="http://twitter.com/matgoms" target="_blank"><img src="https://dm2301files.storage.live.com/y4m0xIEn2KPUPyb4rVubWTjUYkD3OHI_UuzBk44PVo0_5rKZw2AfYvpIE8lMsMFYoff4pBuCuoeHLylk-G9Ux9nYwYwexXK7dYE8fBmF0rojlzPI8W1DwbBodkZfe-6FDJa998gHWV7nRvxa_Tqwj5NkhOCaZT1S1sn2RYT7oM_rdPq7G-jDJDi5eBl7mnZXiQz?width=24&amp;height=24&amp;cropmode=none" alt="y4m0xIEn2KPUPyb4rVubWTjUYkD3OHI_UuzBk44PVo0_5rKZw2AfYvpIE8lMsMFYoff4pBuCuoeHLylk-G9Ux9nYwYwexXK7dYE8fBmF0rojlzPI8W1DwbBodkZfe-6FDJa998gHWV7nRvxa_Tqwj5NkhOCaZT1S1sn2RYT7oM_rdPq7G-jDJDi5eBl7mnZXiQz" class="mt-4"></a> <a href="http://linkedin.com/in/matgoms" target="_blank"><img src="https://dm2301files.storage.live.com/y4mBrkcdUMCRUYYmrhi1dTgZhMF71w-iFwv7VaOEidBJH6EqFWOFA-D3W7eh5x4AsrRFRhWTcVzvDLJqGeWHrD0hzj10ePgs7nBDCMqLf5Zf-rtaiZABpkyGQANENM8HXymsxEnOTsf8kLj_TAlvaE2W0jcjLhah1-89Tp_Fk0QuaPmQIUofpkMMJZqpvDuT2Lk?width=24&amp;height=24&amp;cropmode=none" alt="y4mBrkcdUMCRUYYmrhi1dTgZhMF71w-iFwv7VaOEidBJH6EqFWOFA-D3W7eh5x4AsrRFRhWTcVzvDLJqGeWHrD0hzj10ePgs7nBDCMqLf5Zf-rtaiZABpkyGQANENM8HXymsxEnOTsf8kLj_TAlvaE2W0jcjLhah1-89Tp_Fk0QuaPmQIUofpkMMJZqpvDuT2Lk" class="mt-4"></a> <a href="http://instagram.com/matgoms" target="_blank"><img src="https://dm2301files.storage.live.com/y4miO3n-Qzk6WjwnDGfi4SFP0K2xmsUCv3t7QODA02y94PL-SeQLK8mLiV06T18XXq15KUZQpwCk5XKvPGfE8pgBTOoVyQA23D71iRkDX5peEvaZHvfPpSn_BILk4Nawpl_qBww_TZp1MpOVjeRKdHU3d620cTAGyxc3EdL-zmD3_WzFZUE2S7oghlFZJmqqkOc?width=21&amp;height=21&amp;cropmode=none" alt="y4miO3n-Qzk6WjwnDGfi4SFP0K2xmsUCv3t7QODA02y94PL-SeQLK8mLiV06T18XXq15KUZQpwCk5XKvPGfE8pgBTOoVyQA23D71iRkDX5peEvaZHvfPpSn_BILk4Nawpl_qBww_TZp1MpOVjeRKdHU3d620cTAGyxc3EdL-zmD3_WzFZUE2S7oghlFZJmqqkOc" class="mt-4"></a>
+  <a href="http://be.net/matgoms" target="_blank"><ion-icon name="logo-behance"></ion-icon></a> 
+  <a href="http://twitter.com/matgoms" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a> 
+  <a href="http://linkedin.com/in/matgoms" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a> 
+  <a href="http://instagram.com/matgoms" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a> 
+
 </div>
 
 
@@ -264,7 +342,7 @@ $(document).ready(function(){
 <div class="lines"></div>
 </div><!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script>
 
@@ -272,22 +350,8 @@ $(document).ready(function(){
       var scroll = new SmoothScroll('a[href*="#"]');
 
 
-
-
-
-
-</script> 
-<script>
-
-
 $(document).ready(function() {
-// Initialize mediumZoom correctly by using mediumZoom() function
-mediumZoom('[data-zoomable]', {
-  background: '#000000',
-});
-
-
-$('.carousel-one').owlCarousel({
+  $('.carousel-one').owlCarousel({
   stagePadding: 0,
   responsiveClass: true,
   center: false,
@@ -334,6 +398,15 @@ $('.carousel-two').owlCarousel({
     },
   },
 });
+
+  
+$('.grid').masonry({
+  columnWidth: 200,
+  itemSelector: '.grid-item'
+});
+ 
+
+
 
 
 
@@ -402,15 +475,32 @@ tippy('[tooltip-5]', {
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="" crossorigin="anonymous" async></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/tippy.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-<div class="contact-side">
-  <a href="#contact" class="btn-secondary col-sm-6 col-md-3">
-    CONTACT
+
+
+<script>
+  var pswpElement = document.querySelectorAll('.my-gallery');
+
+  // Initialize PhotoSwipe
+  var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+  gallery.init();
+</script>
+
+
+
+
+<div class="contact-side d-flex">
+  <a href="#contact" class="btn btn-secondary col-sm-6 col-md-3 ">
+    Contact <ion-icon name="mail-open-outline" class="ms-2"></ion-icon>
+  </a>  
+  <a href="#menu" class="btn btn-outline-secondary col-sm-6 col-md-3 ms-2 ps-2" style="padding: .5rem;   width: 42px;   justify-content: center;"><ion-icon name="arrow-up-outline" class="m-0"></ion-icon>
   </a>
   </div>
 </body>   

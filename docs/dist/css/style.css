@@ -6,12 +6,12 @@
 }
 
 body {
-    background-color: #141414;
+    background-color: --bs-body-bg !important;
 }
 
 a {
     text-decoration: none !important;
-    font-size: 18px;
+    font-size: 1rem;
     text-decoration: uppercase;
 }
 
@@ -42,51 +42,27 @@ h5 {
     margin-bottom: 24px;
 }
 
+
 p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     margin-top: 24px;
 }
 
-.btn-primary {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    border-radius: 6.25rem;
-    background: rgb(46, 46, 46);
-    color: rgb(255, 255, 255);
-    height: 3rem;
+.btn{
     display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    cursor: pointer;
-    outline: 0px;
-    -webkit-box-align: center;
+    border-radius: 100px !important;
+    padding:8px 24px;
     align-items: center;
-    vertical-align: middle;
-    overflow: hidden;
-    position: relative;
-    border: 0px;
+    width: fit-content;
+}
+
+
+.btn-primary {
     width: fit-content;
 }
 
 .btn-secondary {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    border-radius: 6.25rem;
-    background: rgb(148, 148, 148);
-    color: rgb(22, 22, 22);
-    height: 3rem;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    cursor: pointer;
-    outline: 0px;
-    -webkit-box-align: center;
-    align-items: center;
-    vertical-align: middle;
-    overflow: hidden;
-    position: relative;
-    border: 0px;
     z-index: 1100;
     width: fit-content;
 }
@@ -252,7 +228,7 @@ div.tippy-box {
     justify-content: space-between;
     display: flex;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 
@@ -282,7 +258,7 @@ div.tippy-box {
 
 
 .side {
-    margin-top: 16px;
+    margin-top: 1rem;
 }
 
 .about-item {
@@ -304,8 +280,8 @@ div.tippy-box {
 
 .social {
     position: fixed;
-    left: 30px;
-    top: 38%;
+    left: 24px;
+    bottom: 24px;
     width: 30px;
 }
 
@@ -325,10 +301,9 @@ div.tippy-box {
     height: 100%;
 }
 
-.img {
+img {
     width: 100%;
-    display: block;
-    background-color: #ffffff;
+    border-radius: 8px;
 }
 
 .progress {
@@ -382,33 +357,26 @@ div.tippy-box {
 }
 
 
-.medium-zoom-overlay {
-    z-index: 5;
+.pswp-gallery a{
+    width: calc(25% - 0.5rem);
+}
+.pswp-gallery img{   
+    
+    height: 20rem;
+  object-fit: cover;
+  border-radius: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-[data-zoomable],
-.medium-zoom-image {
-    z-index: 10;
-    object-fit: cover;
+.pswp-gallery a:nth-child(1) img {
+    height: calc(40rem + 0.5rem) !important
 }
 
-.works div div img {
-    width: 100%;
-    height: 251px;
-    object-fit: cover;
+.pswp-gallery a:nth-child(2),  .pswp-gallery a:nth-child(5) {
+    width: calc(50% - 0.5rem)
 }
 
-.works div div:nth-child(2) img {
-    height: 526px
-}
 
-.works div div:nth-child(3) img {
-    height: 526px
-}
-
-.works div div:nth-child(4) img {
-    height: 526px
-}
 
 .drawings img {
     object-fit: cover;
@@ -439,7 +407,7 @@ div.tippy-box {
 .owl-carousel div {
     position: relative;
     z-index: 100;
-    -webkit-backface-visibility: hidden;
+   
 }
 
 .owl-carousel .owl-stage-outer {
@@ -452,25 +420,25 @@ div.tippy-box {
 
 
 .drawings {
-    margin-top: 420px;
+    margin-top: 9rem;
     overflow: hidden;
 }
 
 .photos {
-    margin-top: 420px;
+    margin-top: 9rem;
     overflow: visible;
 }
 
 .hello {
-    margin-top: 100px;
+    margin-top: 9rem;
 }
 
 .works {
-    margin-top: 360px;
+    margin-top: 9rem;
 }
 
 .about-me {
-    margin-top: 420px;
+    margin-top: 9rem;
     display: flex;
 }
 
@@ -484,11 +452,11 @@ div.tippy-box {
     filter: saturate(1);
 }
 .contact {
-    margin-top: 420px;
+    margin-top: 9rem;
 }
 
 .footer {
-    margin-top: 370px;
+    margin-top: 9rem;
 }
 
 
@@ -668,8 +636,8 @@ div.tippy-box {
         position: relative;
         width: 100%;
         justify-content: center;
-        left: 0px;
-        top: 0;
+        left: 24px;
+        bottom: 24px;
         display: flex;
         margin: 56px 0px
     }
@@ -721,7 +689,7 @@ div.tippy-box {
     will-change: transform
 }
 
-</style><style type="text/css">.knight-rider-loader {
+knight-rider-loader {
     line-height: 0;
     white-space: nowrap;
     width: 78px
@@ -1277,7 +1245,7 @@ body.ios iframe.tmblr-iframe--gdpr-banner {
     pointer-events: none
 }
 
-</style><style type="text/css">.live-photo {
+.live-photo {
     position: relative;
     overflow: hidden;
     cursor: pointer;
