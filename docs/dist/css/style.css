@@ -415,25 +415,25 @@ img {
 
 
 .drawings {
-    margin-top: 9rem;
+    margin-top: 10rem;
     overflow: hidden;
 }
 
 .photos {
-    margin-top: 9rem;
+    margin-top: 10rem;
     overflow: visible;
 }
 
 .hello {
-    margin-top: 9rem;
+    margin-top: 10rem;
 }
 
 .works {
-    margin-top: 9rem;
+    margin-top: 10rem;
 }
 
 .about-me {
-    margin-top: 9rem;
+    margin-top: 10rem;
     display: flex;
 }
 
@@ -447,11 +447,11 @@ img {
     filter: saturate(1);
 }
 .contact {
-    margin-top: 9rem;
+    margin-top: 10rem;
 }
 
 .footer {
-    margin-top: 9rem;
+    margin-top: 10rem;
 }
 
 
