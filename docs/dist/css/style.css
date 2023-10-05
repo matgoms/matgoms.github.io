@@ -2,20 +2,27 @@
 
 * {
     font-family: Inter, sans-serif;
-    color: #ffffff !important
+    color: #ffffff
 }
 
 body {
     background-color: --bs-body-bg !important;
 }
 
+
+
 a {
+    color: #fff;
     text-decoration: none;
     font-size: 1rem;
     text-decoration: uppercase;
 }
 .contact a{
     text-decoration: underline;
+}
+
+.contact a:hover{
+    color: #0d6efd;
 }
 
 
@@ -40,7 +47,7 @@ h3 {
 
 h5 {
     font-size: 16px;
-    color: #606375;
+    color: #fff;
     line-height: 24px;
 }
 
@@ -69,6 +76,10 @@ p {
 }
 div.tippy-box {
     background: none;
+}
+
+.header{
+    padding: 0;
 }
 
 .menu {
@@ -284,6 +295,11 @@ div.tippy-box {
     width: 30px;
 }
 
+.social ion-icon {
+    font-size:24px;
+    margin-top: 16px;
+}
+
 .background-lines {
     z-index: -1;
     display: flex;
@@ -442,7 +458,6 @@ img {
 }
 
 .about-me img{
-    margin-top: 24px;
     transition: opacity 0.2s linear, -webkit-transform 0.2s ease-out, -webkit-filter 0.2s linear;
     filter: saturate(0);
 }
