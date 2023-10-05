@@ -36,17 +36,15 @@ h3 {
 }
 
 h5 {
-    font-size: 14px;
+    font-size: 16px;
     color: #606375;
     line-height: 24px;
-    margin-bottom: 24px;
 }
 
 
 p {
     font-size: 1rem;
-    font-weight: 300;
-    margin-top: 24px;
+    font-weight: 100;
 }
 
 .btn{
@@ -257,9 +255,6 @@ div.tippy-box {
 }
 
 
-.side {
-    margin-top: 1rem;
-}
 
 .about-item {
     margin-top: 55px;
