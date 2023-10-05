@@ -372,7 +372,7 @@ img {
     height: calc(40rem + 0.5rem) !important
 }
 
-.pswp-gallery a:nth-child(2),  .pswp-gallery a:nth-child(5) {
+.pswp-gallery a:nth-child(2),  .pswp-gallery a:nth-child(5),  .pswp-gallery a:nth-child(6)  {
     width: calc(50% - 0.5rem)
 }
 
