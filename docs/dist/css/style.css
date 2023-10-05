@@ -363,17 +363,17 @@ img {
 .pswp-gallery img{   
     
     height: 20rem;
-  object-fit: cover;
-  border-radius: .5rem;
-  margin-bottom: 0.5rem;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-top: 10.8px;
 }
 
 .pswp-gallery a:nth-child(1) img {
-    height: calc(40rem + 0.5rem) !important
+    height: calc(40rem + 10.8px) !important
 }
 
 .pswp-gallery a:nth-child(2),  .pswp-gallery a:nth-child(5),  .pswp-gallery a:nth-child(6)  {
-    width: calc(50% - 0.5rem)
+    width: calc(50% - 5px)
 }
 
 
