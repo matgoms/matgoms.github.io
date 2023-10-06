@@ -475,7 +475,6 @@ img {
 }
 
 .carousel-two img {
-    height: 260px;
     object-fit: cover;
 }
 
@@ -565,6 +564,9 @@ img {
     .contact-side {
         display: none;
     }
+    .carousel-two img {
+        height: 220px;
+    }
 }
 
 @media (max-width:991px) {
@@ -635,6 +637,9 @@ img {
     .social ion-icon {
         margin-right: 8px
     }
+    .carousel-two img {
+        height: 320px;
+    }
 }
 
 @media (max-width:575px) {
@@ -646,7 +651,6 @@ img {
 
     .photos {
         margin-top: 220px;
-        overflow: hidden;
     }
 
     .hello {
@@ -718,6 +722,9 @@ img {
 
     .menu-overlay a {
         font-size: 46px;
+    }
+    .carousel-two img {
+        height: 316px;
     }
 }
 
