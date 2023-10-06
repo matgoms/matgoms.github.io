@@ -197,44 +197,36 @@
 
     </div>
 
-    <div class="pswp-gallery pswp-gallery--single-column"
-      data-masonry="{&quot;percentPosition&quot;: true, &quot;gutter&quot;:10.8}" id="gallery--getting-started">
-      <a href="dist/img/photos/1.jpg" data-pswp-width="1280" data-pswp-height="1920" data-cropped="true"
-        target="_blank">
+    <div class="pswp-gallery" data-masonry="{&quot;gutter&quot;:10.8}" id="gallery--getting-started">
+      <div class="grid-item item-tl"><a href="dist/img/photos/1.jpg" data-pswp-width="1280" data-pswp-height="1920" data-cropped="true"  target="_blank" >
         <img src="dist/img/photos/1.jpg" alt="" />
-      </a>
-      <a href="dist/img/photos/2.jpg" data-pswp-width="1000" data-pswp-height="667" data-cropped="true" target="_blank">
+      </a></div>
+      <div class="grid-item item-wd"> <a href="dist/img/photos/2.jpg" data-pswp-width="1000" data-pswp-height="667" data-cropped="true" target="_blank">
         <img src="dist/img/photos/2.jpg" alt="" />
-      </a>
-      <a href="dist/img/photos/3.jpg" data-pswp-width="1280" data-pswp-height="1920" data-cropped="true"
-        target="_blank">
+      </a></div>
+      <div class="grid-item"><a href="dist/img/photos/3.jpg" data-pswp-width="1280" data-pswp-height="1920" data-cropped="true" target="_blank">
         <img src="dist/img/photos/3.jpg" alt="" />
-      </a>
-      <a href="dist/img/photos/4.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true"
-        target="_blank">
+      </a></div>
+      <div class="grid-item"><a href="dist/img/photos/4.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true" target="_blank">
         <img src="dist/img/photos/4.jpg" alt="" />
-      </a>
-      <a href="dist/img/photos/5.jpg" data-pswp-width="1920" data-pswp-height="1280" data-cropped="true"
-        target="_blank">
+      </a></div>
+      <div class="grid-item item-wd"><a href="dist/img/photos/5.jpg" data-pswp-width="1920" data-pswp-height="1280" data-cropped="true" target="_blank">
         <img src="dist/img/photos/5.jpg" alt="" />
-      </a>
-      <a href="dist/img/photos/6.jpg" data-pswp-width="1920" data-pswp-height="1280" data-cropped="true"
-        target="_blank">
+      </a></div>
+      <div class="grid-item item-wd"><a href="dist/img/photos/6.jpg" data-pswp-width="1920" data-pswp-height="1280" data-cropped="true"  target="_blank">
         <img src="dist/img/photos/6.jpg" alt="" />
-      </a>
-      <a href="dist/img/photos/7.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true"
-        target="_blank">
+      </a></div>
+      <div class="grid-item"><a href="dist/img/photos/7.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true"  target="_blank">
         <img src="dist/img/photos/7.jpg" alt="" />
-      </a>
-      <a href="dist/img/photos/8.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true"
-        target="_blank">
+      </a></div>
+      <div class="grid-item"><a href="dist/img/photos/8.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true"  target="_blank">
         <img src="dist/img/photos/8.jpg" alt="" />
-      </a>
+      </a></div>
 
     </div>
 
     <div>
-      <a href="http://be.net/matgoms" target="_blank" class="btn btn-dark float-end mt-4">
+      <a href="photos.html" target="_blank" class="btn btn-dark float-end mt-4">
         Explore all photos <ion-icon name="arrow-forward-outline"></ion-icon></h3></a>
     </div>
 
@@ -263,19 +255,19 @@
             <div class="owl-stage-outer">
               <div class="owl-stage"
                 style="transform: translate3d(-3203px, 0px, 0px); transition: all 0.25s ease 0s; width: 5950px;">
-                <div class="owl-item" style="">
+                <div class="owl-item" >
                   <div class="col-md-12"><img src="dist/img/design1.jpg"></div>
                 </div>
-                <div class="owl-item" style="height: 400px;">
+                <div class="owl-item">
                   <div class="col-md-12"><img src="dist/img/design2.png" alt=""></div>
                 </div>
-                <div class="owl-item" style="">
+                <div class="owl-item" >
                   <div class="col-md-12"><img src="dist/img/design3.jpg" alt=""></div>
                 </div>
-                <div class="owl-item" style="">
+                <div class="owl-item" >
                   <div class="col-md-12"><img src="dist/img/design4.jpg" alt=""></div>
                 </div>
-                <div class="owl-item active" style="">
+                <div class="owl-item active">
                   <div class="col-md-12"><img src="dist/img/design5.jpg" alt=""></div>
                 </div>
 
@@ -314,7 +306,7 @@
           </div>
           <div class="col-md-3 d-none d-md-block d-lg-block d-xl-block"><img src="dist/img/me.jpg" alt=""></div>
         </div>
-        <div class="d-flex justify-content-md-between">
+        <div class="d-sm-block d-md-block d-lg-flex justify-content-sm-between">
 
           <div class="work-experience">
             <div class="about-item">
@@ -520,11 +512,8 @@
       });
 
 
-      $('.grid').masonry({
-        columnWidth: 200,
-        itemSelector: '.grid-item'
-      });
-
+  
+    
 
 
 
