@@ -32,15 +32,15 @@
     }
 
     [data-tippy-root] {
-      max-width: 31.25rem;
+      max-width: 500px;
     }
 
     .tippy-box {
       position: relative;
       background-color: #333;
       color: #fff;
-      border-radius: .25rem;
-      font-size: .875rem;
+      border-radius: 4px;
+      font-size: 14px;
       line-height: 1.4;
       white-space: normal;
       outline: 0;
@@ -52,9 +52,9 @@
     }
 
     .tippy-box[data-placement^=top]>.tippy-arrow:before {
-      bottom: -0.4375rem;
+      bottom: -7px;
       left: 0;
-      border-width: .5rem .5rem 0;
+      border-width: 8px 8px 0;
       border-top-color: initial;
       transform-origin: center top
     }
@@ -64,9 +64,9 @@
     }
 
     .tippy-box[data-placement^=bottom]>.tippy-arrow:before {
-      top: -0.4375rem;
+      top: -7px;
       left: 0;
-      border-width: 0 .5rem .5rem;
+      border-width: 0 8px 8px;
       border-bottom-color: initial;
       transform-origin: center bottom
     }
@@ -76,9 +76,9 @@
     }
 
     .tippy-box[data-placement^=left]>.tippy-arrow:before {
-      border-width: .5rem 0 .5rem .5rem;
+      border-width: 8px 0 8px 8px;
       border-left-color: initial;
-      right: -0.4375rem;
+      right: -7px;
       transform-origin: center left
     }
 
@@ -87,8 +87,8 @@
     }
 
     .tippy-box[data-placement^=right]>.tippy-arrow:before {
-      left: -0.4375rem;
-      border-width: .5rem .5rem .5rem 0;
+      left: -7px;
+      border-width: 8px 8px 8px 0;
       border-right-color: initial;
       transform-origin: center right
     }
@@ -98,8 +98,8 @@
     }
 
     .tippy-arrow {
-      width: 1rem;
-      height: 1rem;
+      width: 16px;
+      height: 16px;
       color: #333
     }
 
@@ -112,7 +112,7 @@
 
     .tippy-content {
       position: relative;
-      padding: .3125rem .5625rem;
+      padding: 5px 9px;
       z-index: 1
     }
   </style>
@@ -179,73 +179,55 @@
     </div>
   </div>
   <div class="container">
-    <div class="hello d-flex">
+ 
 
-      <div class="col-md-10 col-sm-12">
-        <h5>Welcome to my portfolio! </h5>
-        <h1 class="mt-4">I'm a 26-years-old photographer, adventurer, art enthusiast and designer. Hope you enjoy it.
-        </h1>
-        <a class="btn btn-primary mt-4" href="#works">Let's go!<ion-icon name="arrow-down-outline" class="ms-2"></ion-icon></a>
+    <div class="project">
+      <div>
+        <a href="index.html" target="_blank" class="btn btn-dark">
+          <ion-icon name="return-up-back-outline" class="me-2"></ion-icon>  Back </h3></a>
       </div>
-    </div>
+      <div class="col-sm-12">
+        <h1 class="mt-4">Design Thinking Challenge</h1>
+        <p class="mt-4">The challenge at hand was to devise a method for digitizing the training chart/plan. In response, the team opted to propose a mobile app that could be readily accessed and consulted throughout training sessions.      
+        </p>
+
+
+        <div class="col-md-12 mt-4 media-canva">
+                   
+           <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFEJj1l7j8&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">  </iframe></div>
+           
+           <h6 class="mt-2 text-white-50">Interactive presentation (click to skip pages)</h5>
+          </p>
+         </div>
+
+
+        <div class="pswp-gallery mt-5" id="gallery--getting-started">
+          <h2 class="mt-4">Concept map</h2>
+          <div class="media-photo"><a href="dist/img/projects/design-thinking-challenge/image.png" data-pswp-width="1999" data-pswp-height="704"  target="_blank" >
+            <img src="dist/img/projects/design-thinking-challenge/image.png" alt="" class="">
+            <h6 class="mt-2 text-white-50">(Click to zoom)</h5>
+          </a></div>
+        
+        </div>
+
+        <div class="col-md-12 mt-5 media-figma">
+          <h2 class="mt-4">App prototype</h2>
+          <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FaaY84lUqg6p1TwlPWJhhln%2FAcademia-(Copy)%3Ftype%3Ddesign%26node-id%3D1-6%26t%3Dh6CGGnSD86yUqCQd-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26mode%3Ddesign3A1&hide-ui=1" allowfullscreen class="mt-4"></iframe>
+          <h6 class="mt-2 text-white-50">(Click to interact)</h5>
+         </p>
+        </div>
+
+      </div>
   </div>
-  <div class="container works" id="works">
-    <div class="col-md-12">
-      <h2>Photography works</h2>
-      <p>This is an album filled with my favorite heartwarming travel memories, incredible landscapes i've encountered, pre-wedding shoot, portraits and much more.</p>
-
-    </div>
-
-    <div class="pswp-gallery" data-masonry="{&quot;gutter&quot;:10.8}" id="gallery--getting-started">
-      <div class="grid-item item-tl"><a href="dist/img/photos/1.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true"  target="_blank" >
-        <img src="dist/img/photos/1.jpg" alt="" />
-      </a></div>
-      <div class="grid-item item-wd"> <a href="dist/img/photos/2.jpg" data-pswp-width="1000" data-pswp-height="667" data-cropped="true" target="_blank">
-        <img src="dist/img/photos/2.jpg" alt="" />
-      </a></div>
-      <div class="grid-item"><a href="dist/img/photos/3.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true" target="_blank">
-        <img src="dist/img/photos/3.jpg" alt="" />
-      </a></div>
-      <div class="grid-item"><a href="dist/img/photos/4.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true" target="_blank">
-        <img src="dist/img/photos/4.jpg" alt="" />
-      </a></div>
-      <div class="grid-item item-wd"><a href="dist/img/photos/5.jpg" data-pswp-width="1920" data-pswp-height="1280" data-cropped="true" target="_blank">
-        <img src="dist/img/photos/5.jpg" alt="" />
-      </a></div>
-      <div class="grid-item item-wd"><a href="dist/img/photos/6.jpg" data-pswp-width="1125" data-pswp-height="1500" data-cropped="true"  target="_blank">
-        <img src="dist/img/photos/6.jpg" alt="" />
-      </a></div>
-      <div class="grid-item"><a href="dist/img/photos/7.jpg" data-pswp-width="1125" data-pswp-height="1500" data-cropped="true"  target="_blank">
-        <img src="dist/img/photos/7.jpg" alt="" />
-      </a></div>
-      <div class="grid-item"><a href="dist/img/photos/8.jpg" data-pswp-width="1000" data-pswp-height="1500" data-cropped="true"  target="_blank">
-        <img src="dist/img/photos/8.jpg" alt="" />
-      </a></div>
-
-    </div>
-
-    <div>
-      <a href="photos.html" target="_blank" class="btn btn-dark float-end mt-4">
-        Explore all photos <ion-icon name="arrow-forward-outline" class="ms-2"></ion-icon></h3></a>
-    </div>
-
-  </div>
+</div>
 
 
 
-  </div>
-
-  </div>
-
-
-
-  </div>
-  <div class="container-fluid" style="overflow: hidden;">
+  <div class="container-fluid" style="overflow: hidden; margin-bottom: 10rem">
 
     <div class="container photos" id="photos">
       <div class="col-md-9">
-        <h2>Design projects</h2>
-      <p>Here are a few recent design projects I've completed.</p>
+        <h2>Latest projects</h2>
       </div>
 
       <div class="col-md-12 mt-4">
@@ -253,18 +235,18 @@
           <div class="owl-carousel carousel-two d-flex owl-loaded owl-drag">
             <div class="owl-stage-outer">
               <div class="owl-stage"
-                style="transform: translate3d(-200.1875rem, 0rem, 0rem); transition: all 0.25s ease 0s; width: 371.875rem;">
+                style="transform: translate3d(-3203px, 0px, 0px); transition: all 0.25s ease 0s; width: 5950px;">
                 <div class="owl-item" >
                   <div class="col-md-12"><img src="dist/img/design1.jpg"></div>
                 </div>
                 <div class="owl-item">
-                  <div class="col-md-12"><a href="projects/ds-genera.html"><img src="dist/img/design2.png" alt=""></a></div>
+                  <div class="col-md-12"><img src="dist/img/design2.png" alt=""></div>
                 </div>
                 <div class="owl-item" >
                   <div class="col-md-12"><img src="dist/img/design3.jpg" alt=""></div>
                 </div>
                 <div class="owl-item" >
-                  <div class="col-md-12"><a href="projects/design-thinking-challenge.html"><img src="dist/img/design4.jpg" alt=""></a></div>
+                  <div class="col-md-12"><img src="dist/img/design4.jpg" alt=""></div>
                 </div>
                 <div class="owl-item active">
                   <div class="col-md-12"><img src="dist/img/design5.jpg" alt=""></div>
@@ -284,152 +266,7 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="about-me" id="about-me">
-      <div class="d-md-none d-lg-none d-xl-none d-block mb-5"><img src="dist/img/me.jpg" alt="" class="img"></div>
-      <div class="col-md-12">
-        <div class="d-flex justify-content-between">
-          <div class="col-md-7">
-            <h2>Over 7 years of work experience with leading companies and small businesses.</h2>
-            <p class="mt-3">As a creative enthusiast, I have always been dedicated to studying various artistic fields and visual
-              communications. I have a strong ability to adapt, allowing me to tackle various situations effectively and
-              find prompt, suitable solutions. Furthermore, through my professional experiences and studies at
-              exceptional universities, I have learned to manage multiple tasks simultaneously and consistently excel by
-              delivering high-quality work.
-            </p>
-
-<div class="d-block mt-4">     
-
-    <p >26yd,<br>
-      São Paulo, Brazil<br>
-      matgoms@gmail.com<br>
-      +55 11 97623 3032</p>
-
-  <a class="btn btn-light mt-4" href="dist/pdf/CV - Matheus Gomes.pdf" target="_blank" download>Download my CV<ion-icon name="download-outline" class="ms-2 text-dark"></ion-icon></a>
-
-</div>
-            
-          </div>
-          <div class="col-md-3 d-none d-md-block d-lg-block d-xl-block"><img src="dist/img/me.jpg" alt=""></div>
-        </div>
-        <div class="d-sm-block d-md-block d-lg-flex justify-content-sm-between">
-
-          <div class="work-experience">
-            <div class="about-item">
-              <h3>Work Experience</h3>
-
-              <h5 class="fw-bold">Designer</h5>
-              <p>Brand Connect</p>
-
-              <h5 class="fw-bold">UX/UI Designer</h5>
-              <p>Tesla</p>
-
-              <h5 class="fw-bold">Web Designer</h5>
-              <p>Link 9</p>
-
-              <h5 class="fw-bold">Designer</h5>
-              <p>Brand Connect</p>
-
-              <h5 class="fw-bold">Art Director</h5>
-              <p>Degrau Publicidade</p>
-
-              <h5 class="fw-bold">UX/UI Designer</h5>
-              <p>Genera</p>
-
-            </div>
-
-            <div class="about-item">
-              <h3>Freelancer</h3>
-
-              <h5 class="fw-bold">Photography and Audiovisual</h5>
-
-            </div>
-          </div>
-
-          <div class="education">
-            <div class="about-item">
-              <h3>Barchelor Degree</h3>
-
-              <h5 class="fw-bold">Advertising and Marketing</h5>
-              <p>Anhembi Morumbi</p>
-
-            </div>
-            <div class="about-item">
-              <h3>Postgraduate</h3>
-
-              <h5 class="fw-bold">User Interface Design</h5>
-              <p>Centro Acadêmico Belas Artes</p>
-
-            </div>
-
-
-            <div class="about-item">
-              <h3>Professional courses</h3>
-
-              <h5 class="fw-bold">Administration</h5>
-              <p>Salesianas</p>
-
-              <h5 class="fw-bold">Programming and Webdesign</h5>
-              <p>CENLEP</p>
-
-              <h5 class="fw-bold">English</h5>
-              <p>Academia Washington</p>
-
-              <h5 class="fw-bold">Computer Graphics</h5>
-              <p>Universidade Cidade de São Paulo</p>
-
-            </div>
-          </div>
-
-
-          <div class="about-item col-md-3">
-            <h3>Habilities</h3>
-            <div class="d-flex justify-content-between">
-              <p class="mb-0 fw-bold">UX/UI</p>
-              <div>
-                95%
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuemax="100"></div>
-            </div>
-
-            <div class="d-flex justify-content-between">
-              <p class="mb-0 fw-bold">Photography</p>
-              <div>
-                90%
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width:90%" aria-valuemax="100"></div>
-            </div>
-
-            <div class="d-flex justify-content-between">
-              <p class="mb-0 fw-bold">Social Media</p>
-              <div>
-                80%
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuemax="100"></div>
-            </div>
-
-            <div class="d-flex justify-content-between">
-              <p class="mb-0 fw-bold">Video Editing / VFX / Motion</p>
-              <div>
-                50%
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemax="100"></div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+ 
   <div class="container">
     <div class="contact d-flex" id="contact">
       <div class="col-md-6">
@@ -542,7 +379,7 @@
       });
 
       tippy('[tooltip-1]', {
-        content: '<img src="dist/img/me.jpg" alt="" height="15.625rem">',
+        content: '<img src="dist/img/me.jpg" alt="" height="250px">',
         followCursor: 'horizontal',
         allowHTML: true,
         arrow: false,
@@ -550,7 +387,7 @@
       });
 
       tippy('[tooltip-2]', {
-        content: '<img src="dist/img/photos/3.jpg" alt="" height="15.625rem" style="object-fit:cover">',
+        content: '<img src="dist/img/photos/3.jpg" alt="" height="250px" style="object-fit:cover">',
         followCursor: 'horizontal',
         allowHTML: true,
         arrow: false,
@@ -558,7 +395,7 @@
       });
 
       tippy('[tooltip-3]', {
-        content: '<img src="dist/img/photos/3.jpg" alt="" height="15.625rem">',
+        content: '<img src="dist/img/photos/3.jpg" alt="" height="250px">',
         followCursor: 'horizontal',
         allowHTML: true,
         arrow: false,
@@ -566,7 +403,7 @@
       });
 
       tippy('[tooltip-4]', {
-        content: '<img src="dist/img/design1.jpg" alt="" height="15.625rem">',
+        content: '<img src="dist/img/design1.jpg" alt="" height="250px">',
         followCursor: 'horizontal',
         allowHTML: true,
         arrow: false,
@@ -574,7 +411,7 @@
       });
 
       tippy('[tooltip-5]', {
-        content: '<img src="dist/img/photos/9.jpg" alt="" height="15.625rem">',
+        content: '<img src="dist/img/photos/9.jpg" alt="" height="250px">',
         followCursor: 'horizontal',
         allowHTML: true,
         arrow: false,
@@ -602,23 +439,13 @@
 
 
 
-  <script>
-    var pswpElement = document.querySelectorAll('.my-gallery');
-
-    // Initialize PhotoSwipe
-    var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-  </script>
-
-
-
 
   <div class="contact-side d-flex">
     <a href="#contact" class="btn btn-secondary col-sm-6 col-md-3 ">
       Contact <ion-icon name="mail-open-outline" class="ms-2"></ion-icon>
     </a>
     <a href="#menu" class="btn btn-outline-secondary col-sm-6 col-md-3 ms-2 ps-2"
-      style="padding: 8px;   width: 2.625rem;   justify-content: center;"><ion-icon name="arrow-up-outline"
+      style="padding: .5rem;   width: 42px;   justify-content: center;"><ion-icon name="arrow-up-outline"
         class="m-0"></ion-icon>
     </a>
   </div>
